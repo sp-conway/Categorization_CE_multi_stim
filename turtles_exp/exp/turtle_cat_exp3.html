@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<!--turtle_cat_exp3.html
+2-dimensional categorization experiment with turtles
+Sean Conway
+March 2022 -->
+<html>
+<head>
+	<title>Categorization Study</title>
+
+		<script  src= "jspsych/dist/jspsych.js"> </script>
+		<script  src= "jspsych/dist/plugin-instructions.js"> </script>
+		<script  src= "jspsych/dist/plugin-preload.js"> </script>
+		<script  src= "jspsych/dist/plugin-canvas-keyboard-response.js"> </script>
+		<script  src= "jspsych/dist/plugin-html-button-response.js"> </script>
+		<script  src= "jspsych/dist/plugin-image-button-response.js"> </script>
+		<script  src= "jspsych/dist/plugin-image-keyboard-response.js"> </script>
+		<script  src= "jspsych/dist/plugin-html-keyboard-response.js"> </script>
+		<script  src= "jspsych/dist/plugin-survey-html-form.js"> </script>
+		<script  src= "jspsych/dist/plugin-survey-text.js"> </script>
+		<script  src= "jspsych/dist/plugin-survey-multi-choice.js"> </script>
+		<script  src= "jspsych/dist/plugin-survey-multi-select.js"> </script>
+		<script  src= "jspsych/dist/plugin-fullscreen.js"> </script>
+		<script  src= "jspsych/dist/plugin-resize.js"> </script>
+		<script src="exp3_learn.js"></script>
+		<script src="exp3_transfer.js"></script>
+		<script src="sampling.js"></script>
+		<script src="drawPro.js"></script>
+		<script src="download_csv.js"></script>
+		<link    href="jspsych/dist/jspsych.css" rel="stylesheet" type="text/css"></link>
+</head>
+
+<body>
+</body>
+
+<script>
+
+	// init timeline
+	var timeline = [];
+
+	// init jsPsych
+	var jsPsych = initJsPsych({
+
+	});
+
+
+	// CONSTANTS
+	var TODAY = new Date();
+	var DD = String(TODAY.getDate()).padStart(2, '0');
+	var MM = String(TODAY.getMonth() + 1).padStart(2, '0');
+	var YYYY = TODAY.getFullYear();
+	const DATE = YYYY + MM + DD;
+	const fb_dur_corr = 1000; //feedback duration if response is correct on transfer trials
+	const fb_dur_incorr = 4000;//feedback duration if response is incorrect on transfer_trials
+	const fb_durr_attr = 500; //feedback duration on attraction effect trials - needs to immediately skip the screen
+	const fb_dur_corr_learn = 500;
+	const fb_dur_incorr_learn=1000;
+
+	// get exp start time
+	var exp_start_time = performance.now();
+	var today = new Date();
+
+	// Adding  important experiment information
+	jsPsych.data.addProperties({
+			// sub_n: part_ID,
+			exp_name: "2d_cat_multi_stim_exp1",
+			date: today.getFullYear() + '-' + (today.getMonth()+1) + '-' +today.getDate(),
+			time: today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(),
+	});
+
+	// CATEGORY PARAMETERS
+	// DO NOT CHANGE ARBITRARILY
+	// angle mean - in category
+	const am=25;
+
+	// radius mean - in category
+	const rm=75;
+
+	// angle sd - in category
+	const asd=3;
+
+	// radius sd - in category
+	const rsd=9;
+
+	// limits for out of category distribution
+	const alim=[10,40]; // angle
+	const rlim=[30,120]; // radius
+
+	jsPsych.data.addProperties({
+			angle_mean_in: am,
+			radius_mean_in: rm,
+			angle_sd_in: asd,
+			radius_sd_in: rsd,
+			angle_min_out: alim[0],
+			angle_max_out: alim[1],
+			radius_min_out: rlim[0],
+			radius_max_out: rlim[1],
+
+	});
+
+
+	//get screen dimensions
+	var height = (window.screen.height)*.90
+	var width = (window.screen.width)*.90
+	var x_center = Math.round(width/2);
+	var y_center = Math.round(height/2);
+
+
+	// preloading some image files
+	var img_preload = {
+			type: jsPsychPreload,
+			images: ['turtleAngleEx.png', 'turtleRadiusEx.png', 'turtleCouple1.png', 'turtleCouple2.png', 'Judg_choice_debrief.png']
+	}
+
+	// check to make sure the right experiment was started.
+	var exp_check = {
+		type: jsPsychHtmlButtonResponse,
+		stimulus: "<p><b>WAIT!</b></p></p>"+
+		"<p>Did you mean to start this experiment? Only Walker, Esther, and Sean are running participants on this experiment.</p>",
+		choices: ["I am sure."]
+	};
+
+	// subject number
+	var enter_sub_n = {
+			data: {
+					exp_trial_type: "enter-sub-number"
+			},
+			type: jsPsychSurveyHtmlForm,
+			preamble: "<p>Please enter in a UNIQUE participant number.</p>",
+			html: '<p>Participant Number: <input type="text" id="test-resp-box" name="response" size="10" required/></p>',
+			autofocus: 'test-resp-box',
+			on_finish: function(data) {
+					jsPsych.data.addProperties({
+							sub_n: data.response["response"]
+					})
+			}
+	};
+
+
+	// consent
+	var consent = {
+			type: jsPsychImageButtonResponse,
+			stimulus: "consent.png",
+			choices: ["I agree."],
+			stimulus_height: 1000,
+			stimulus_width: 1800
+	};
+
+	// have to clear screen after trials. Otherwise the turtle lingers on Firefox
+	var clear_screen = {
+		data: {
+				screen_id: 'clear_screen'
+		},
+		type: jsPsychCanvasKeyboardResponse,
+		canvas_size:[height,width],
+		stimulus: function(c){
+			var context = c.getContext('2d');
+			context.clearRect(0, 0, c.width, c.height);
+		}, //clear html5 canvas
+		post_trial_gap: 0,
+		trial_duration: 50,
+		choices:jsPsych.NO_CHOICES
+	};
+
+	// welcome subjects to the experiment
+	var pre_instr_msg = {
+		type: jsPsychHtmlButtonResponse,
+		stimulus: '<div style= "font-size:25px;" <p> <strong> Welcome to the experiment! </strong><br> <p style="color:#8B0000; font-size:25px;"><strong> Please do NOT exit full screen until you are done with the experiment. </strong> </p>'+
+				'<p style="font-size:25px;color:#8B0000;"> <strong> The experiment will be canceled and your data will be lost <br> if you try to go back or refresh the page at any point during the experiment.</strong> </p>'+
+				'<br><p> <strong> Thanks in advance for your contribution to our research! </strong></p>',
+		choices: ["Continue"]
+	};
+
+	// instructions 1 - introduce turtles
+	var instructions_1 = {
+			data: {
+					screen_id: "instructions_1"
+			},
+			type: jsPsychInstructions,
+			choices: ['Continue'],
+			show_clickable_nav: true,
+			button_label_next: "Continue",
+			button_label_previous: "Previous Page",
+			pages: ["<p><b>The Stimuli:</b></p><br>" +
+					"<p>In this experiment, you will be classifying turtles. Here are a couple examples:</p>" +
+					"<div style='float: center;'><img src='turtleCouple1.png'/> ",
+					"<p>Here are a couple more examples:"+
+					"<div style='float: center;'><img src='turtleCouple2.png'/> ",
+					"<p>You are tasked with determining whether or not each turtle belongs to a particular subspecies of turtles. There are TWO components related to whether or not the turtle is in the subspecies.</p>" +
+					"<p>You should consider both the height of the green shell (illustrated by the white arrow in the picture)…</p>"+
+					"<div style='float: center;'><img src='turtleRadiusEx.png'/> ",
+					"<p>And you should consider the size of the angle of the yellow head...</p>"+
+					"<div style='float: center;'><img src='turtleAngleEx.png'/> "+
+					"<p>There's some uncertainty involved in this task. You can't be 100% certain whether or not a turtle is in the subspecies." +
+					" BUT, some turtles are far more likely to belong to the subspecies than others." +
+					"<p>Your job is to learn this subspecies and then use what you have learned to " +
+					"decide if each turtle belongs to the subspecies or not.</p><br>" +
+					"<p>We will begin by showing examples of turtles you can expect to see in the study. Then, we will narrow in and show you the kinds of turtles in the subspecies. Each screen will be up for 15 seconds. Please use the entire time to study the turtles.</p>",
+			],
+	};
+
+	function set_html_style_1() { // from Melisa Akan
+		document.body.style.backgroundColor = "#F3F0F0"// background color
+	};
+
+	// demo-ing the types of stimuli that are in the category
+	demo_in = [
+		{
+			a: 22,
+			r: 66
+		},
+		{
+			a: 22,
+			r: 75
+		},
+		{
+			a: 22,
+			r: 84
+		},
+		{
+			a: 25,
+			r: 66
+		},
+		{
+			a: 25,
+			r: 75
+		},
+		{
+			a: 25,
+			r: 84
+		},
+		{
+			a: 28,
+			r: 66
+		},
+		{
+			a: 28,
+			r: 75
+		},
+		{
+			a: 28,
+			r: 84
+		}
+	];
+
+
+	// demo a grid over a range of stimuli to show the full range of possible turtles
+	var demo_range = [
+		{
+			a: 16,
+			r: 48
+		},
+		{
+			a: 16,
+			r: 75
+		},
+		{
+			a: 16,
+			r: 102
+		},
+		{
+			a: 25,
+			r: 48
+		},
+		{
+			a: 25,
+			r: 102
+		},
+		{
+			a: 34,
+			r: 48
+		},
+		{
+			a: 34,
+			r: 75
+		},
+		{
+			a: 34,
+			r: 75
+		},
+		{
+			a: 34,
+			r: 102
+		}
+	];
+
+	// need to shuffle demo options
+	var demo_in_shuffled = [];
+	var demo_range_shuffled = [];
+	var vec = jsPsych.randomization.shuffle([0,1,2,3,4,5,6,7,8]);
+	for(let i=0; i<9; i++){
+		demo_in_shuffled.push(demo_in[vec[i]])
+		demo_range_shuffled.push(demo_range[vec[i]])
+	}
+	const n_demo=9;
+	var interval=100;
+
+	// ugly code-getting positions for demo options
+	var demo_width = 2400;
+	var demo_height = 1500;
+	var demo_x = [demo_width*.15, demo_width*.5, demo_width*.8];
+	var demo_y = [demo_height*.25, demo_height*.5, demo_height*.75];
+	var interval=60;
+
+	var demo_pos = [
+		{
+			x: demo_x[0],
+			y: demo_y[0]
+		},
+		{
+			x: demo_x[0],
+			y: demo_y[1]
+		},
+		{
+			x: demo_x[0],
+			y: demo_y[2]
+		},
+		{
+			x: demo_x[1],
+			y: demo_y[0]
+		},
+		{
+			x: demo_x[1],
+			y: demo_y[1]
+		},
+		{
+			x: demo_x[1],
+			y: demo_y[2]
+		},
+		{
+			x: demo_x[2],
+			y: demo_y[0]
+		},
+		{
+			x: demo_x[2],
+			y: demo_y[1]
+		},
+		{
+			x: demo_x[2],
+			y: demo_y[2]
+		},
+	]
+
+	// pre - demo in message
+	var pre_demo_in_mssg = {
+			data: {
+					screen_id: "Click to see some turtles in the subspecies."
+			},
+			type: jsPsychInstructions,
+			pages: [
+					'Click to see some turtles in the subspecies.'
+			],
+			show_clickable_nav: true
+	}
+
+	//the first population screen
+	var demo_in = {
+				type: jsPsychCanvasKeyboardResponse,
+				canvas_size:[demo_height, demo_width],
+				stimulus: function(c){
+					for (let i=0; i<n_demo; i++){
+						drawPro(c, demo_pos[i].x, demo_pos[i].y, demo_in_shuffled[i].r, convertToRadian(demo_in_shuffled[i].a), demo=true);
+					}
+					ctx=c.getContext('2d');
+					ctx.font='48px sans-serif';
+					ctx.fillStyle='green';
+					ctx.fillText("TURTLES IN THE SUBSPECIES", width*.1, height*.05);
+					ctx.font='24px sans-serif';
+					ctx.fillStyle='black';
+					ctx.fillText("Please study these turtles closely.", width*.43, height*.9);
+				},
+				trial_duration: 15000,
+				post_trial_gap: 500,
+				data: {
+					screen_id: "demo_in"
+				 },
+				choices:"NO_KEYS"
+	};
+
+	// pre - demo out message
+	var pre_demo_range_mssg = {
+			data: {
+					screen_id: "Click to see the kinds of turtles that will appear in the study."
+			},
+			type: jsPsychInstructions,
+			pages: [
+					"Click to see the kinds of turtles that will appear in the study."
+			],
+			show_clickable_nav: true
+	}
+
+	var demo_range = {
+				type: jsPsychCanvasKeyboardResponse,
+				canvas_size:[demo_height, demo_width],
+				stimulus: function(c){
+					for (let i=0; i<n_demo; i++){
+						drawPro(c, demo_pos[i].x, demo_pos[i].y, demo_range_shuffled[i].r, convertToRadian(demo_range_shuffled[i].a),demo=true);
+					}
+					ctx=c.getContext('2d');
+					ctx.fillStyle='black';
+					ctx.font='24px sans-serif';
+					ctx.fillText("Take a look at the kinds of turtles you'll see in this study.", width*.1, height*.05);
+				},
+				trial_duration: 15000,
+				post_trial_gap: 500,
+				data: {
+					screen_id: "demo_range"
+				 },
+
+				choices:"NO_KEYS"
+	};
+
+	var instructions_2 = {
+		data: {
+			screen_id: "instructions_2"
+		},
+		type: jsPsychInstructions,
+		choices: ['Continue'],
+		show_clickable_nav: true,
+		button_label_next: "Continue",
+		button_label_previous: "Previous Page",
+		pages:[
+			"<p><b>Learning the subspecies</b></p><br>" +
+			"<p>The experiment is broken into two phases. In the first phase, you will learn the subspecies.</p>"+
+			"<p>There will be a second phase in which you will use what you've learned to make more classifications - but instructions for that will come later.</p>",
+			"<p>For now, you will learn to classify a single turtle on each trial.</p>"+
+			"<p>Before each trial, you will see a plus sign. This will let you know that you are about to see a new turtle.</p>"+
+			"<p>When the trial begins, you will be shown a turtle.</p>"+
+			"<p>Press 'u' on the keyboard if the turtle DOES belong to the subspecies, and 'i' if it DOES NOT belong to the subspecies.</p>"+
+			"<p>After each response you will be told whether or not your answer was correct and whether or not the turtle belongs in the subspecies.</p>"+
+			"<p>This feedback will help you get better at classifying these turtles.</p>",
+			"<p>The answers you provide today will contribute to the advancement of psychological science, and we thank you immensely for this.</p>"+
+			"<p>To obtain meaningful patterns in the data, we require active engagement on your part.</p>"+
+			"<p>If you have any questions, ask the experimenter now.</p>"
+		]
+	};
+
+	// pre - experiment message
+	var pre_exp_mssg = {
+			data: {
+					screen_id: "Click to begin the first phase of the experiment."
+			},
+			type: jsPsychInstructions,
+			pages: [
+					'Click to begin the first phase of the experiment.'
+			],
+			show_clickable_nav: true
+	}
+
+	function draw_fix_cross(c){
+		var ctx = c.getContext("2d");
+		ctx.fillStyle='black';
+		ctx.lineWidth = 2.5;
+		ctx.beginPath();
+		ctx.moveTo(x_center-25, y_center);
+		ctx.lineTo(x_center+25, y_center);
+		ctx.stroke();
+		ctx.moveTo(x_center, y_center-25);
+		ctx.lineTo(x_center, y_center+25);
+		ctx.stroke();
+		ctx.fill();
+	}
+
+	// draw a fixation cross
+	var fixation = {
+		data: {
+				screen_id: 'fixation'
+		},
+		type: jsPsychCanvasKeyboardResponse,
+		canvas_size: [height,width],
+		stimulus: draw_fix_cross,
+		choices: "NO_KEYS",
+		trial_duration: 500, // in ms
+		post_trial_gap: 450
+	};
+
+	var learn = {
+		data: {
+				screen_id: 'learn_trial',
+				exp_trial_type: 'learn',
+				angle: jsPsych.timelineVariable('angle'),
+				radius: jsPsych.timelineVariable('radius'),
+				distribution: jsPsych.timelineVariable('distribution')
+		},
+		type: jsPsychCanvasKeyboardResponse,
+		canvas_size: [height,width],
+		stimulus: function(c){
+			console.log(jsPsych.timelineVariable('distribution'))
+			drawPro(
+				c,
+				width,
+				height,
+				jsPsych.timelineVariable('radius'),
+				convertToRadian(jsPsych.timelineVariable('angle'))
+			)
+		},
+		choices: ['u','i'],
+		on_finish: function(data){
+			if(jsPsych.timelineVariable('distribution')=="in"){
+				if(data.response=="u"){
+					data.choice=1;
+					data.correct=1;
+				}else if(data.response=="i"){
+					data.correct=0;
+					data.choice=0;
+				}
+			}else if(jsPsych.timelineVariable('distribution')=="out"){
+				if(data.response=="u"){
+					data.choice=1;
+					data.correct=0;
+				}else if(data.response=="i"){
+					data.choice=0;
+					data.correct=1;
+				}
+			}
+			console.log("response=",data.response);
+			console.log("choice=",data.choice)
+			console.log("correct=",data.correct)
+			return data
+		}
+	}
+
+	// giving feedback after learning trials
+	var learn_feedback = {
+			data: {
+					screen_id: 'learn_feedback',
+					exp_trial_type: 'learn_feedback',
+					angle: jsPsych.timelineVariable('angle'),
+					radius: jsPsych.timelineVariable('radius'),
+					distribution: jsPsych.timelineVariable('distribution')
+			},
+			type: jsPsychCanvasKeyboardResponse,
+			canvas_size: [height,width],
+			stimulus: function(c,data){
+				drawPro(
+					c,
+					width,
+					height,
+					jsPsych.timelineVariable('radius'),
+					convertToRadian(jsPsych.timelineVariable('angle')),
+					fb=true,
+					demo=false,
+					correct=jsPsych.data.get().last(1).values()[0].correct,
+					response=jsPsych.data.get().last(1).values()[0].response
+				)
+			},
+			choices: "NO_KEYS",
+			allow_held_key: true,
+			response_ends_trial: false,
+			trial_duration: function(data) {
+					var trial_correct = jsPsych.data.get().last(1).values()[0].correct;
+					if (trial_correct == 1) {
+							var feedback_duration = fb_dur_corr_learn;
+					} else if (trial_correct==0){
+							var feedback_duration = fb_dur_incorr_learn;
+					}
+					return feedback_duration
+			}
+	};
+
+	// transfer instructions
+	var transfer_instructions = {
+			timeline: [{
+					data: {
+							screen_id: "transfer_instructions"
+					},
+					type: jsPsychInstructions,
+					choices: ['Continue'],
+					show_clickable_nav: true,
+					button_label_next: "Continue",
+					button_label_previous: "Previous Page",
+					pages: ["<p><b>Using what you've learned</b></p><br>" +
+							"<p>The learning phase is now complete.</p>"+
+							"<p>You will now use what you've learned to classify some new turtles.</p>",
+							"<p>Everything will be just like before, but with one exception...</p>"+
+							"<p>You will now see multiple turtles at the same time - Sometimes two turtles, sometimes three turtles.</p>"+
+							"<p>Your job is to determine which of these turtles is <b>most likely</b> to belong to the subspecies.</p>"+
+							"<p>Use the J, K, and L keys to respond.</p>",
+							"<p>The subspecies is the same one you've already learned.<p>"+
+							"<p>Sometimes you will receive feedback. This feedback will let you know whether or not you were correct and, if you were incorrect, which turtle was the correct answer.</p>"+
+							"<p>Other times, you will not receive feedback on your accuracy. You will simply be told thank you.</p>"+
+							"<p>The decision will sometimes be difficult, just do your best!</p>"
+					]
+			}, ],
+	};
+
+	var pre_transfer_mssg = {
+			data: {
+					screen_id: "Click to begin the second phase of the experiment."
+			},
+			type: jsPsychInstructions,
+			pages: [
+					'Click to begin the second phase of the experiment.'
+			],
+			show_clickable_nav: true
+	};
+
+	// draw a fixation cross
+	var fixation_transfer = {
+		data: {
+				screen_id: 'fixation'
+		},
+		type: jsPsychCanvasKeyboardResponse,
+		canvas_size: [height,width],
+		stimulus: draw_fix_cross,
+		on_finish: function(data){
+			if(jsPsych.timelineVariable('choice_set')=="binary"){
+					var shuff=jsPsych.randomization.shuffle(["a","b"]);
+					var order=shuff[0]+shuff[1];
+					data.order=order;
+			}else if(jsPsych.timelineVariable('choice_set')=="trinary"){
+					var shuff=jsPsych.randomization.shuffle(["a","b","c"]);
+					var order=shuff[0]+shuff[1]+shuff[2];
+					data.order=order;
+			}
+			if(jsPsych.timelineVariable('trial_type')=="filler_sample"){
+				var angle_a=Math.round(rnorm(n=1,mu=am,sigma=asd));
+				var radius_a=Math.round(rnorm(n=1,mu=rm,sigma=rsd));
+				var angle_b=Math.round(runif(min=alim[0],max=alim[1]));
+				var radius_b=Math.round(runif(max=rlim[0],max=rlim[1]));
+				if(jsPsych.timelineVariable('choice_set')=="trinary"){
+					var angle_c=Math.round(runif(min=alim[0],max=alim[1]));
+					var radius_c=Math.round(runif(min=rlim[0],max=rlim[1]));
+				}
+			}else{
+				var angle_a=jsPsych.timelineVariable('angle_a')
+				var radius_a=jsPsych.timelineVariable('radius_a')
+				var angle_b=jsPsych.timelineVariable('angle_b')
+				var radius_b=jsPsych.timelineVariable('radius_b')
+				if(jsPsych.timelineVariable('choice_set')=="trinary"){
+					var angle_c=jsPsych.timelineVariable('angle_c');
+					var radius_c=jsPsych.timelineVariable('radius_c');
+				}
+			}
+			if(jsPsych.timelineVariable('choice_set')=="binary"){
+					if(order=="ab"){
+						if(jsPsych.timelineVariable('trial_type')!="attraction"){
+							var jkl_correct="j";
+						}else{
+							var jkl_correct="jk";
+						}
+					}else if(order=="ba"){
+						if(jsPsych.timelineVariable('trial_type')!="attraction"){
+							var jkl_correct="k";
+						}else{
+							var jkl_correct="jk";
+						}
+					 }
+			 }else if(jsPsych.timelineVariable("choice_set")=="trinary"){
+					 if(order=="abc"){
+						 if(jsPsych.timelineVariable('trial_type')!="attraction"){
+							 var jkl_correct="j";
+						}else{
+							var jkl_correct="jl";
+						}
+					 }else if(order=="acb"){
+						 if(jsPsych.timelineVariable('trial_type')!="attraction"){
+							 var jkl_correct="j";
+						}else{
+							var jkl_correct="jk";
+						}
+					 }else if(order=="cab"){
+						 if(jsPsych.timelineVariable('trial_type')!="attraction"){
+							 var jkl_correct="k";
+						}else{
+							var jkl_correct="jk";
+						}
+					 }else if(order=="cba"){
+						 if(jsPsych.timelineVariable('trial_type')!="attraction"){
+							 var jkl_correct="l";
+						}else{
+							var jkl_correct="jl";
+						}
+					 }else if(order=="bca"){
+						 if(jsPsych.timelineVariable('trial_type')!="attraction"){
+							 var jkl_correct="l"
+						}else{
+							var jkl_correct="kl";
+						}
+					 }else if(order=="bac"){
+						 if(jsPsych.timelineVariable('trial_type')!="attraction"){
+							 var jkl_correct="k"
+						}else{
+							var jkl_correct="kl"
+						}
+					 }
+				 }
+				 data.order = order;
+				 data.angle_a=angle_a;
+				 data.radius_a=radius_a;
+				 data.angle_b=angle_b;
+				 data.radius_b=radius_b;
+				 if(jsPsych.timelineVariable('choice_set')=="trinary"){
+					 data.angle_c=angle_c;
+					 data.radius_c=radius_c;
+				 }
+				 data.jkl_correct=jkl_correct;
+				 return data
+		},
+		choices: "NO_KEYS",
+		trial_duration: 500, // in ms
+		post_trial_gap: 450
+	};
+
+	var transfer = {
+		data: {
+				screen_id: 'transfer_trial',
+				exp_trial_type: 'transfer',
+				transfer_trial_type: jsPsych.timelineVariable('trial_type'),
+				choice_set: jsPsych.timelineVariable('choice_set'),
+				abc_correct: jsPsych.timelineVariable('abc_correct'),
+				tc_correct: jsPsych.timelineVariable('tc_correct'),
+				tc_angle: jsPsych.timelineVariable('tc_angle'),
+				tdc_a: jsPsych.timelineVariable('tdc_a'),
+				tdc_b: jsPsych.timelineVariable('tdc_b'),
+				tdc_c: jsPsych.timelineVariable('tdc_c'),
+				pair: jsPsych.timelineVariable('pair'),
+				category_a: jsPsych.timelineVariable('category_a'),
+				category_b: jsPsych.timelineVariable('category_b'),
+				category_c: jsPsych.timelineVariable('category_c'),
+				order: function(){return jsPsych.data.get().last(1).values()[0].order},
+				angle_a: function(){return jsPsych.data.get().last(1).values()[0].angle_a},
+				radius_a: function(){return jsPsych.data.get().last(1).values()[0].radius_a},
+				angle_b: function(){return jsPsych.data.get().last(1).values()[0].angle_b},
+				radius_b: function(){return jsPsych.data.get().last(1).values()[0].radius_b},
+				angle_c: function(data){
+					if(jsPsych.timelineVariable('choice_set')=="trinary"){
+						return jsPsych.data.get().last(1).values()[0].angle_c
+					}else{
+						return null
+					}
+				},
+				radius_c: function(data){
+					if(jsPsych.timelineVariable('choice_set')=="trinary"){
+						return jsPsych.data.get().last(1).values()[0].radius_c
+					}else{
+						return null
+					}
+				},
+				jkl_correct: function(){return jsPsych.data.get().last(1).values()[0].jkl_correct}
+		},
+		type: jsPsychCanvasKeyboardResponse,
+		canvas_size: [height,width],
+		post_trial_gap: 0,
+		choices: function(){
+			if(jsPsych.timelineVariable('choice_set')=="binary"){
+				return ['j','k']
+			}else if(jsPsych.timelineVariable('choice_set')=="trinary"){
+				return ['j','k','l']
+			}
+		},
+		stimulus: function(c, data){
+			console.log("trial type=",jsPsych.timelineVariable('trial_type'))
+			var order=jsPsych.data.get().last(1).values()[0].order;
+			var jkl_correct=jsPsych.data.get().last(1).values()[0].jkl_correct
+			var angle_a=jsPsych.data.get().last(1).values()[0].angle_a;
+			var radius_a=jsPsych.data.get().last(1).values()[0].radius_a;
+			var angle_b=jsPsych.data.get().last(1).values()[0].angle_b;
+			var radius_b=jsPsych.data.get().last(1).values()[0].radius_b;
+			if(jsPsych.timelineVariable('choice_set')=="trinary"){
+				var angle_c=jsPsych.data.get().last(1).values()[0].angle_c;
+				var radius_c=jsPsych.data.get().last(1).values()[0].radius_c
+			}
+
+			console.log("angle a ",angle_a);
+			console.log("radius a ",radius_a);
+			console.log("angle b ",angle_b);
+			console.log("radius b ",radius_b);
+			console.log("angle c ",angle_c);
+			console.log("radius c ",radius_c);
+			console.log('order',order)
+
+			if(jsPsych.timelineVariable('choice_set')=="binary"){
+					if(order=="ab"){
+						drawTwoPros(
+							c,
+							width,
+							height,
+							radius_a,
+							angle_a,
+							radius_b,
+							angle_b
+						 )
+					}else if(order=="ba"){
+						drawTwoPros(
+							c,
+							width,
+							height,
+							radius_b,
+							angle_b,
+							radius_a,
+							angle_a
+						 )
+					 }
+				 }else if(jsPsych.timelineVariable("choice_set")=="trinary"){
+					 if(order=="abc"){
+						 drawThreePros(
+							 c,
+							 width,
+							 height,
+							 radius_a,
+							 angle_a,
+							 radius_b,
+							 angle_b,
+							 radius_c,
+							 angle_c
+						 )
+					 }else if(order=="acb"){
+						 drawThreePros(
+							 c,
+							 width,
+							 height,
+							 radius_a,
+							 angle_a,
+							 radius_c,
+							 angle_c,
+							 radius_b,
+							 angle_b
+						 )
+					 }else if(order=="cab"){
+						 drawThreePros(
+							 c,
+							 width,
+							 height,
+							 radius_c,
+							 angle_c,
+							 radius_a,
+							 angle_a,
+							 radius_b,
+							 angle_b
+						 )
+					 }else if(order=="cba"){
+						drawThreePros(
+							 c,
+							 width,
+							 height,
+							 radius_c,
+							 angle_c,
+							 radius_b,
+							 angle_b,
+							 radius_a,
+							 angle_a
+						 )
+					 }else if(order=="bca"){
+						drawThreePros(
+							 c,
+							 width,
+							 height,
+							 radius_b,
+							 angle_b,
+							 radius_c,
+							 angle_c,
+							 radius_a,
+							 angle_a
+						 )
+					 }else if(order=="bac"){
+						drawThreePros(
+							 c=c,
+							 width=width,
+							 height=height,
+							 left_r=radius_b,
+							 left_a=angle_b,
+							 center_r=radius_a,
+							 center_a=angle_a,
+							 right_r=radius_c,
+							 right_a=angle_c
+						 )
+					 }
+				 }
+			 },
+		 on_finish: function(data){
+			 var order=jsPsych.data.get().last(1).values()[0].order;
+			 if(order=="ab"){
+				 if(data.response=="j"){
+					 var choice="a";
+				 }else if(data.response=="k"){
+					 var choice="b";
+				 }
+			 }else if(order=="ba"){
+				 if(data.response=="j"){
+					 var choice="b";
+				 }else if(data.response=="k"){
+					 var choice="a";
+				 }
+			 }else if(order=="abc"){
+					 if(data.response=="j"){
+						 var choice="a";
+					 }else if(data.response=="k"){
+						 var choice="b";
+					 }else if(data.response=="l"){
+						 var choice="c";
+					 }
+			 }else if(order=="acb"){
+				 if(data.response=="j"){
+					 var choice="a";
+				 }else if(data.response=="k"){
+					 var choice="c";
+				 }else if(data.response=="l"){
+					 var choice="b";
+				 }
+			 }else if(order=="cab"){
+				 if(data.response=="j"){
+					 var choice="c";
+				 }else if(data.response=="k"){
+					 var choice="a";
+				 }else if(data.response=="l"){
+					 var choice="b";
+				 }
+			 }else if(order=="cba"){
+				 if(data.response=="j"){
+					 var choice="c";
+				 }else if(data.response=="k"){
+					 var choice="b";
+				 }else if(data.response=="l"){
+					 var choice="a";
+				 }
+			 }else if(order=="bca"){
+				 if(data.response=="j"){
+					 var choice="b";
+				 }else if(data.response=="k"){
+					 var choice="c";
+				 }else if(data.response=="l"){
+					 var choice="a";
+				 }
+			 }else if(order=="bac"){
+				 if(data.response=="j"){
+					 var choice="b";
+				 }else if(data.response=="k"){
+					 var choice="a";
+				 }else if(data.response=="l"){
+					 var choice="c";
+				 }
+			 }
+			 if(jsPsych.timelineVariable('trial_type')!='attraction'){
+				 if(choice==jsPsych.timelineVariable('abc_correct')){
+					 data.correct=1;
+				 }else{
+					 data.correct=0;
+				 }
+			 }else{
+				 if(choice==jsPsych.timelineVariable('abc_correct')[0]|choice==jsPsych.timelineVariable('abc_correct')[1]){
+					 data.correct=1;
+				 }else{
+					 data.correct=0;
+				 }
+			 }
+			 data.choice=choice;
+			 console.log("correct choice was",jsPsych.timelineVariable('abc_correct'))
+			 console.log("choice=",choice)
+			 console.log("correct=",data.correct)
+			 return data
+		 }
+	};
+
+	var transfer_feedback = {
+		data: {
+				screen_id: 'transfer_feedback',
+				exp_trial_type: 'transfer',
+				transfer_trial_type: jsPsych.timelineVariable('trial_type'),
+				choice_set: jsPsych.timelineVariable('choice_set'),
+				angle_a: function(){return jsPsych.data.get().last(1).values()[0].angle_a},
+				radius_a: function(){return jsPsych.data.get().last(1).values()[0].radius_a},
+				angle_b: function(){return jsPsych.data.get().last(1).values()[0].angle_b},
+				radius_b: function(){return jsPsych.data.get().last(1).values()[0].radius_b},
+				angle_c: function(){
+					if(jsPsych.timelineVariable('choice_set')=="trinary"){
+						return jsPsych.data.get().last(1).values()[0].angle_c
+					}else{
+						return null
+					}
+				},
+				radius_c: function(){
+					if(jsPsych.timelineVariable('choice_set')=="trinary"){
+						return jsPsych.data.get().last(1).values()[0].radius_c
+					}else{
+						return null
+					}
+				},
+				abc_correct: jsPsych.timelineVariable('abc_correct'),
+				pair: jsPsych.timelineVariable('pair'),
+				tc_correct: jsPsych.timelineVariable('tc_correct'),
+				tdc_a: jsPsych.timelineVariable('tdc_a'),
+				tdc_b: jsPsych.timelineVariable('tdc_b'),
+				tdc_c: jsPsych.timelineVariable('tdc_c'),
+				category_a: jsPsych.timelineVariable('category_a'),
+				category_b: jsPsych.timelineVariable('category_b'),
+				category_c: jsPsych.timelineVariable('category_c'),
+				order: function(){return jsPsych.data.get().last(1).values()[0].order},
+				choice: function(){return jsPsych.data.get().last(1).values()[0].choice},
+				correct: function(){return jsPsych.data.get().last(1).values()[0].correct},
+				response: function(){return jsPsych.data.get().last(1).values()[0].response}
+		},
+		type: jsPsychCanvasKeyboardResponse,
+		canvas_size: [height,width],
+		choices: "NO_KEYS",
+		post_trial_gap: 250,
+		trial_duration: function(data) {
+				var trial_correct = jsPsych.data.get().last(1).values()[0].correct;
+				if(jsPsych.timelineVariable('trial_type')!="attraction"){
+					if (trial_correct == 1) {
+							var feedback_duration = fb_dur_corr;
+					} else if(trial_correct==0){
+							var feedback_duration = fb_dur_incorr;
+					}
+					//console.log('feedback_duration=',feedback_duration)
+				}else{
+					var feedback_duration=fb_durr_attr;
+					console.log('attraction feedback')
+				}
+				console.log("feedback duration=",feedback_duration)
+				return feedback_duration
+		},
+		stimulus: function(c, data){
+			var order=jsPsych.data.get().last(1).values()[0].order;
+			var angle_a=jsPsych.data.get().last(1).values()[0].angle_a;
+			var radius_a=jsPsych.data.get().last(1).values()[0].radius_a;
+			var angle_b=jsPsych.data.get().last(1).values()[0].angle_b;
+			var radius_b=jsPsych.data.get().last(1).values()[0].radius_b;
+			if(jsPsych.timelineVariable('choice_set')=="trinary"){
+				var angle_c=jsPsych.data.get().last(1).values()[0].angle_c;
+				var radius_c=jsPsych.data.get().last(1).values()[0].radius_c;
+			}
+			var rsp_correct=jsPsych.data.get().last(1).values()[0].correct;
+			var jkl_correct=jsPsych.data.get().last(1).values()[0].jkl_correct;
+			var choice=jsPsych.data.get().last(1).values()[0].choice;
+			var abc_correct=jsPsych.data.get().last(1).values()[0].abc_correct;
+			var trial_type=jsPsych.timelineVariable('trial_type');
+			console.log("angle a ",angle_a);
+			console.log("radius a ",radius_a);
+			console.log("angle b ",angle_b);
+			console.log("radius b ",radius_b);
+			console.log("angle c ",angle_c);
+			console.log("radius c ",radius_c);
+			console.log('jkl correct=',jkl_correct);
+			console.log('order',order)
+			if(rsp_correct==1){
+				var correct=true;
+				console.log("correct=",correct)
+			}else if(rsp_correct==0){
+				var correct=false;
+				console.log("correct=",correct)
+			}
+
+			if(jsPsych.timelineVariable('choice_set')=="binary"){
+					if(order=="ab"){
+						drawTwoPros(
+							c,
+							width,
+							height,
+							radius_a,
+							angle_a,
+							radius_b,
+							angle_b,
+							fb=true,
+							correct=correct,
+							trial_type=trial_type,
+							jkl_correct=jkl_correct
+						 )
+					}else if(order=="ba"){
+						drawTwoPros(
+							c,
+							width,
+							height,
+							radius_b,
+							angle_b,
+							radius_a,
+							angle_a,
+							fb=true,
+							correct=correct,
+							trial_type=trial_type,
+							jkl_correct=jkl_correct
+						 )
+					 }
+				 }else if(jsPsych.timelineVariable("choice_set")=="trinary"){
+					 if(order=="abc"){
+						 drawThreePros(
+							 c,
+							 width,
+							 height,
+							 radius_a,
+							 angle_a,
+							 radius_b,
+							 angle_b,
+							 radius_c,
+							 angle_c,
+							 fb=true,
+							 correct=correct,
+							 trial_type=trial_type,
+							 jkl_correct=jkl_correct
+						 )
+					 }else if(order=="acb"){
+						 drawThreePros(
+							 c,
+							 width,
+							 height,
+							 radius_a,
+							 angle_a,
+							 radius_c,
+							 angle_c,
+							 radius_b,
+							 angle_b,
+							 fb=true,
+							 correct=correct,
+							 trial_type=trial_type,
+							 jkl_correct=jkl_correct
+						 )
+					 }else if(order=="cab"){
+						 drawThreePros(
+							 c,
+							 width,
+							 height,
+							 radius_c,
+							 angle_c,
+							 radius_a,
+							 angle_a,
+							 radius_b,
+							 angle_b,
+							 fb=true,
+							 correct=correct,
+							 trial_type=trial_type,
+							 jkl_correct=jkl_correct
+						 )
+					 }else if(order=="cba"){
+						 drawThreePros(
+							 c,
+							 width,
+							 height,
+							 radius_c,
+							 angle_c,
+							 radius_b,
+							 angle_b,
+							 radius_a,
+							 angle_a,
+							 fb=true,
+							 correct=correct,
+							 trial_type=trial_type,
+							 jkl_correct=jkl_correct
+						 )
+					 }else if(order=="bca"){
+						 drawThreePros(
+							 c,
+							 width,
+							 height,
+							 radius_b,
+							 angle_b,
+							 radius_c,
+							 angle_c,
+							 radius_a,
+							 angle_a,
+							 fb=true,
+							 correct=correct,
+							 trial_type=trial_type,
+							 jkl_correct=jkl_correct
+						 )
+					 }else if(order=="bac"){
+						 drawThreePros(
+							 c,
+							 width,
+							 height,
+							 radius_b,
+							 angle_b,
+							 radius_a,
+							 angle_a,
+							 radius_c,
+							 angle_c,
+							 fb=true,
+							 correct=correct,
+							 trial_type=trial_type,
+							 jkl_correct=jkl_correct
+						 )
+					 }
+			 }
+		 }
+	 };
+
+	var learn_procedure = {
+			timeline: [fixation, clear_screen, learn, learn_feedback, clear_screen],
+			timeline_variables: learn_trials,
+			repetitions: 1,
+			randomize_order: true
+	};
+
+	var transfer_procedure = {
+			timeline: [fixation_transfer,  transfer, transfer_feedback, clear_screen],
+			timeline_variables: transfer_trials,
+			repetitions: 3,
+			randomize_order: true
+	}
+
+	var pre_demo_mssg = {
+		type: jsPsychHtmlButtonResponse,
+		stimulus: '<p> Thank you for your patience!</p>'+
+				'<p>  You will be done after completing a brief demographic form. </p>',
+
+		choices: ["Continue"]
+	};
+
+	var demo1 = {
+				type: jsPsychSurveyText,
+				questions: [{prompt: "How old are you?", required:false}],
+			preamble: "<p> <strong>  DEMOGRAPHIC FORM </strong> </p>",
+			data: {
+					exp_trial_type: "age"
+				 },
+			on_finish: function(data){
+					var d = jsPsych.data.getLastTrialData().trials[0].response;
+
+					jsPsych.data.addProperties({
+						age: d.Q0,
+					});
+			}
+				};
+
+	//race--can choose more than one
+	var demo2 = {
+			type: jsPsychSurveyMultiSelect,
+			questions:[{prompt: "Race: What race do you consider yourself to be?", options:["American Indian or Alaska Native", "Asian", "Black or African-American","Native Hawaiian or Other Pacific Islander",  "White", "Other", "Prefer not to say"],required:true}],
+			preamble:"<p> <strong>  DEMOGRAPHIC FORM </strong> </p>",
+			data: {
+					exp_trial_type: "race"
+				 },
+			on_finish: function(data){
+				var d = jsPsych.data.getLastTrialData().trials[0].response;
+					jsPsych.data.addProperties({
+						race: d.Q0,
+				});
+
+				}
+			};
+
+
+	//gender ethnicity
+	var demo3 = {
+			type: jsPsychSurveyMultiChoice,
+				questions: [{prompt: "Ethnicity: Do you consider yourself to be Hispanic or Latino?", options: ["Yes", "No", "Prefer not to say"], required:true},
+			{prompt: "Gender: What best describes your gender?", options: ["Female", "Male", "Nonbinary/third gender", "Prefer not to say", "Other"], required:true}],
+			preamble:"<p> <strong>  DEMOGRAPHIC FORM </strong> </p>",
+			data: {
+					exp_trial_type: "ethnicityGender"
+				 },
+			on_finish: function(data) {
+				var time_taken = performance.now()- exp_start_time;
+
+				var d = jsPsych.data.getLastTrialData().trials[0].response;
+
+				jsPsych.data.addProperties({
+					ethnicity: d.Q0,
+					gender: d.Q1,
+					exp_duration: time_taken
+				});
+				var csv = jsPsych.data.get().csv();
+				var file_name = "2d_cat_multi_stim_exp1_" + jsPsych.data.get().last(1).values()[0].sub_n + ".csv";
+				download_csv(csv, file_name);
+			}
+		}
+
+	var end_mssg = {
+		type: jsPsychHtmlButtonResponse,
+		stimulus: '<p> Thank you for your participation! </p>'+
+				"<p> You are all done. The next screen will show you the debriefing. Press j when you're done reading the debriefing.</p>",
+		choices: ["Read debriefing"]
+	};
+
+	var debrief = {
+	    data: {
+	        screen_id: "debrief"
+	    },
+	    type: jsPsychImageKeyboardResponse,
+	    choices: ['j'],
+	    stimulus: 'Judg_choice_debrief.png',
+	    prompt: "",
+	    trial_duration: 60000,
+	    response_ends_trial: true
+	}
+
+
+
+	// running the experiment
+	timeline.push(img_preload);
+	//timeline.push(exp_check);
+	// timeline.push(enter_sub_n);
+	timeline.push({
+		type: jsPsychFullscreen,
+		fullscreen_mode: true,
+		on_start: set_html_style_1
+	});
+	// timeline.push(consent);
+
+	// timeline.push(pre_instr_msg);
+	// timeline.push(instructions_1);
+	// timeline.push(pre_demo_range_mssg);
+	// timeline.push(demo_range);
+	// timeline.push(pre_demo_in_mssg)
+	// timeline.push(demo_in);
+	// timeline.push(instructions_2);
+	// timeline.push(pre_exp_mssg);
+	// timeline.push(learn_procedure);
+	// timeline.push(transfer_instructions);
+	// timeline.push(pre_transfer_mssg);
+	timeline.push(transfer_procedure);
+	timeline.push(pre_demo_mssg);
+	timeline.push(demo1);
+	timeline.push(demo2);
+	timeline.push(demo3);
+	timeline.push(end_mssg);
+	timeline.push(debrief);
+	jsPsych.run(timeline);
+
+
+	</script>

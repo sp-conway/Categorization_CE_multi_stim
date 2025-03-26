@@ -1,0 +1,26 @@
+model {
+  for (k in 1:length(choices)) {
+    choices[k] ~ dbern(p[k])
+    
+    logit(p[k]) = ifelse(stim_type[k]==0, int_below[subs[k]] + sl_below[subs[k]]*log_odds_in[k],
+                         int_above[subs[k]] + sl_above[subs[k]]*log_odds_in[k])
+  }
+  
+  
+  for(j in 1:max(subs)){
+    int_above[j] ~ dnorm(M_int_above, 1/SD_int^2) #intercept for stimuli above mean
+    int_below[j] ~ dnorm(M_int_below, 1/SD_int^2) #intercept for stimuli below mean
+    # sl_above[j] = 0
+    # sl_below[j] = 0
+    sl_above[j] ~ dnorm(M_sl_above, 1/SD_sl^2) #slope for stimuli above mean
+    sl_below[j] ~ dnorm(M_sl_below, 1/SD_sl^2) #slope for stimuli below mean
+  }
+  
+  M_int_above ~ dnorm(0, 1/3^2)
+  M_int_below ~ dnorm(0, 1/3^2)
+  SD_int ~ dunif(0,3)
+  M_sl_above ~ dnorm(0, 1/3^2)
+  M_sl_below ~ dnorm(0, 1/3^2)
+  SD_sl ~ dunif(0,3)
+  
+}

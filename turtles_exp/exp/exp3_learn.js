@@ -1,0 +1,801 @@
+var learn_trials = [{
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 28,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 27.9518,
+    "radius": 76.607,
+    "distribution": "in"
+}, {
+    "angle": 27.8087,
+    "radius": 78.1624,
+    "distribution": "in"
+}, {
+    "angle": 27.5753,
+    "radius": 79.6161,
+    "distribution": "in"
+}, {
+    "angle": 27.2592,
+    "radius": 80.9214,
+    "distribution": "in"
+}, {
+    "angle": 26.8705,
+    "radius": 82.0365,
+    "distribution": "in"
+}, {
+    "angle": 26.4216,
+    "radius": 82.9254,
+    "distribution": "in"
+}, {
+    "angle": 25.9271,
+    "radius": 83.5595,
+    "distribution": "in"
+}, {
+    "angle": 25.4027,
+    "radius": 83.9185,
+    "distribution": "in"
+}, {
+    "angle": 24.8654,
+    "radius": 83.9909,
+    "distribution": "in"
+}, {
+    "angle": 24.3324,
+    "radius": 83.7744,
+    "distribution": "in"
+}, {
+    "angle": 23.8209,
+    "radius": 83.2757,
+    "distribution": "in"
+}, {
+    "angle": 23.3473,
+    "radius": 82.5112,
+    "distribution": "in"
+}, {
+    "angle": 22.9268,
+    "radius": 81.5052,
+    "distribution": "in"
+}, {
+    "angle": 22.5729,
+    "radius": 80.2901,
+    "distribution": "in"
+}, {
+    "angle": 22.2971,
+    "radius": 78.905,
+    "distribution": "in"
+}, {
+    "angle": 22.1081,
+    "radius": 77.3943,
+    "distribution": "in"
+}, {
+    "angle": 22.0121,
+    "radius": 75.8068,
+    "distribution": "in"
+}, {
+    "angle": 22.0121,
+    "radius": 74.1932,
+    "distribution": "in"
+}, {
+    "angle": 22.1081,
+    "radius": 72.6057,
+    "distribution": "in"
+}, {
+    "angle": 22.2971,
+    "radius": 71.095,
+    "distribution": "in"
+}, {
+    "angle": 22.5729,
+    "radius": 69.7099,
+    "distribution": "in"
+}, {
+    "angle": 22.9268,
+    "radius": 68.4948,
+    "distribution": "in"
+}, {
+    "angle": 23.3473,
+    "radius": 67.4888,
+    "distribution": "in"
+}, {
+    "angle": 23.8209,
+    "radius": 66.7243,
+    "distribution": "in"
+}, {
+    "angle": 24.3324,
+    "radius": 66.2256,
+    "distribution": "in"
+}, {
+    "angle": 24.8654,
+    "radius": 66.0091,
+    "distribution": "in"
+}, {
+    "angle": 25.4027,
+    "radius": 66.0815,
+    "distribution": "in"
+}, {
+    "angle": 25.9271,
+    "radius": 66.4405,
+    "distribution": "in"
+}, {
+    "angle": 26.4216,
+    "radius": 67.0746,
+    "distribution": "in"
+}, {
+    "angle": 26.8705,
+    "radius": 67.9635,
+    "distribution": "in"
+}, {
+    "angle": 27.2592,
+    "radius": 69.0786,
+    "distribution": "in"
+}, {
+    "angle": 27.5753,
+    "radius": 70.3839,
+    "distribution": "in"
+}, {
+    "angle": 27.8087,
+    "radius": 71.8376,
+    "distribution": "in"
+}, {
+    "angle": 27.9518,
+    "radius": 73.393,
+    "distribution": "in"
+}, {
+    "angle": 31,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 29.2426,
+    "radius": 87.7279,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 93,
+    "distribution": "in"
+}, {
+    "angle": 20.7574,
+    "radius": 87.7279,
+    "distribution": "in"
+}, {
+    "angle": 19,
+    "radius": 75,
+    "distribution": "in"
+}, {
+    "angle": 20.7574,
+    "radius": 62.2721,
+    "distribution": "in"
+}, {
+    "angle": 25,
+    "radius": 57,
+    "distribution": "in"
+}, {
+    "angle": 29.2426,
+    "radius": 62.2721,
+    "distribution": "in"
+}, {
+    "angle": 10,
+    "radius": 30,
+    "distribution": "out"
+}, {
+    "angle": 10,
+    "radius": 40,
+    "distribution": "out"
+}, {
+    "angle": 10,
+    "radius": 50,
+    "distribution": "out"
+}, {
+    "angle": 10,
+    "radius": 60,
+    "distribution": "out"
+}, {
+    "angle": 10,
+    "radius": 70,
+    "distribution": "out"
+}, {
+    "angle": 10,
+    "radius": 80,
+    "distribution": "out"
+}, {
+    "angle": 10,
+    "radius": 90,
+    "distribution": "out"
+}, {
+    "angle": 10,
+    "radius": 100,
+    "distribution": "out"
+}, {
+    "angle": 10,
+    "radius": 110,
+    "distribution": "out"
+}, {
+    "angle": 10,
+    "radius": 120,
+    "distribution": "out"
+}, {
+    "angle": 13.3333,
+    "radius": 30,
+    "distribution": "out"
+}, {
+    "angle": 13.3333,
+    "radius": 40,
+    "distribution": "out"
+}, {
+    "angle": 13.3333,
+    "radius": 50,
+    "distribution": "out"
+}, {
+    "angle": 13.3333,
+    "radius": 60,
+    "distribution": "out"
+}, {
+    "angle": 13.3333,
+    "radius": 70,
+    "distribution": "out"
+}, {
+    "angle": 13.3333,
+    "radius": 80,
+    "distribution": "out"
+}, {
+    "angle": 13.3333,
+    "radius": 90,
+    "distribution": "out"
+}, {
+    "angle": 13.3333,
+    "radius": 100,
+    "distribution": "out"
+}, {
+    "angle": 13.3333,
+    "radius": 110,
+    "distribution": "out"
+}, {
+    "angle": 13.3333,
+    "radius": 120,
+    "distribution": "out"
+}, {
+    "angle": 16.6667,
+    "radius": 30,
+    "distribution": "out"
+}, {
+    "angle": 16.6667,
+    "radius": 40,
+    "distribution": "out"
+}, {
+    "angle": 16.6667,
+    "radius": 50,
+    "distribution": "out"
+}, {
+    "angle": 16.6667,
+    "radius": 60,
+    "distribution": "out"
+}, {
+    "angle": 16.6667,
+    "radius": 70,
+    "distribution": "out"
+}, {
+    "angle": 16.6667,
+    "radius": 80,
+    "distribution": "out"
+}, {
+    "angle": 16.6667,
+    "radius": 90,
+    "distribution": "out"
+}, {
+    "angle": 16.6667,
+    "radius": 100,
+    "distribution": "out"
+}, {
+    "angle": 16.6667,
+    "radius": 110,
+    "distribution": "out"
+}, {
+    "angle": 16.6667,
+    "radius": 120,
+    "distribution": "out"
+}, {
+    "angle": 20,
+    "radius": 30,
+    "distribution": "out"
+}, {
+    "angle": 20,
+    "radius": 40,
+    "distribution": "out"
+}, {
+    "angle": 20,
+    "radius": 50,
+    "distribution": "out"
+}, {
+    "angle": 20,
+    "radius": 60,
+    "distribution": "out"
+}, {
+    "angle": 20,
+    "radius": 70,
+    "distribution": "out"
+}, {
+    "angle": 20,
+    "radius": 80,
+    "distribution": "out"
+}, {
+    "angle": 20,
+    "radius": 90,
+    "distribution": "out"
+}, {
+    "angle": 20,
+    "radius": 100,
+    "distribution": "out"
+}, {
+    "angle": 20,
+    "radius": 110,
+    "distribution": "out"
+}, {
+    "angle": 20,
+    "radius": 120,
+    "distribution": "out"
+}, {
+    "angle": 23.3333,
+    "radius": 30,
+    "distribution": "out"
+}, {
+    "angle": 23.3333,
+    "radius": 40,
+    "distribution": "out"
+}, {
+    "angle": 23.3333,
+    "radius": 50,
+    "distribution": "out"
+}, {
+    "angle": 23.3333,
+    "radius": 60,
+    "distribution": "out"
+}, {
+    "angle": 23.3333,
+    "radius": 70,
+    "distribution": "out"
+}, {
+    "angle": 23.3333,
+    "radius": 80,
+    "distribution": "out"
+}, {
+    "angle": 23.3333,
+    "radius": 90,
+    "distribution": "out"
+}, {
+    "angle": 23.3333,
+    "radius": 100,
+    "distribution": "out"
+}, {
+    "angle": 23.3333,
+    "radius": 110,
+    "distribution": "out"
+}, {
+    "angle": 23.3333,
+    "radius": 120,
+    "distribution": "out"
+}, {
+    "angle": 26.6667,
+    "radius": 30,
+    "distribution": "out"
+}, {
+    "angle": 26.6667,
+    "radius": 40,
+    "distribution": "out"
+}, {
+    "angle": 26.6667,
+    "radius": 50,
+    "distribution": "out"
+}, {
+    "angle": 26.6667,
+    "radius": 60,
+    "distribution": "out"
+}, {
+    "angle": 26.6667,
+    "radius": 70,
+    "distribution": "out"
+}, {
+    "angle": 26.6667,
+    "radius": 80,
+    "distribution": "out"
+}, {
+    "angle": 26.6667,
+    "radius": 90,
+    "distribution": "out"
+}, {
+    "angle": 26.6667,
+    "radius": 100,
+    "distribution": "out"
+}, {
+    "angle": 26.6667,
+    "radius": 110,
+    "distribution": "out"
+}, {
+    "angle": 26.6667,
+    "radius": 120,
+    "distribution": "out"
+}, {
+    "angle": 30,
+    "radius": 30,
+    "distribution": "out"
+}, {
+    "angle": 30,
+    "radius": 40,
+    "distribution": "out"
+}, {
+    "angle": 30,
+    "radius": 50,
+    "distribution": "out"
+}, {
+    "angle": 30,
+    "radius": 60,
+    "distribution": "out"
+}, {
+    "angle": 30,
+    "radius": 70,
+    "distribution": "out"
+}, {
+    "angle": 30,
+    "radius": 80,
+    "distribution": "out"
+}, {
+    "angle": 30,
+    "radius": 90,
+    "distribution": "out"
+}, {
+    "angle": 30,
+    "radius": 100,
+    "distribution": "out"
+}, {
+    "angle": 30,
+    "radius": 110,
+    "distribution": "out"
+}, {
+    "angle": 30,
+    "radius": 120,
+    "distribution": "out"
+}, {
+    "angle": 33.3333,
+    "radius": 30,
+    "distribution": "out"
+}, {
+    "angle": 33.3333,
+    "radius": 40,
+    "distribution": "out"
+}, {
+    "angle": 33.3333,
+    "radius": 50,
+    "distribution": "out"
+}, {
+    "angle": 33.3333,
+    "radius": 60,
+    "distribution": "out"
+}, {
+    "angle": 33.3333,
+    "radius": 70,
+    "distribution": "out"
+}, {
+    "angle": 33.3333,
+    "radius": 80,
+    "distribution": "out"
+}, {
+    "angle": 33.3333,
+    "radius": 90,
+    "distribution": "out"
+}, {
+    "angle": 33.3333,
+    "radius": 100,
+    "distribution": "out"
+}, {
+    "angle": 33.3333,
+    "radius": 110,
+    "distribution": "out"
+}, {
+    "angle": 33.3333,
+    "radius": 120,
+    "distribution": "out"
+}, {
+    "angle": 36.6667,
+    "radius": 30,
+    "distribution": "out"
+}, {
+    "angle": 36.6667,
+    "radius": 40,
+    "distribution": "out"
+}, {
+    "angle": 36.6667,
+    "radius": 50,
+    "distribution": "out"
+}, {
+    "angle": 36.6667,
+    "radius": 60,
+    "distribution": "out"
+}, {
+    "angle": 36.6667,
+    "radius": 70,
+    "distribution": "out"
+}, {
+    "angle": 36.6667,
+    "radius": 80,
+    "distribution": "out"
+}, {
+    "angle": 36.6667,
+    "radius": 90,
+    "distribution": "out"
+}, {
+    "angle": 36.6667,
+    "radius": 100,
+    "distribution": "out"
+}, {
+    "angle": 36.6667,
+    "radius": 110,
+    "distribution": "out"
+}, {
+    "angle": 36.6667,
+    "radius": 120,
+    "distribution": "out"
+}, {
+    "angle": 40,
+    "radius": 30,
+    "distribution": "out"
+}, {
+    "angle": 40,
+    "radius": 40,
+    "distribution": "out"
+}, {
+    "angle": 40,
+    "radius": 50,
+    "distribution": "out"
+}, {
+    "angle": 40,
+    "radius": 60,
+    "distribution": "out"
+}, {
+    "angle": 40,
+    "radius": 70,
+    "distribution": "out"
+}, {
+    "angle": 40,
+    "radius": 80,
+    "distribution": "out"
+}, {
+    "angle": 40,
+    "radius": 90,
+    "distribution": "out"
+}, {
+    "angle": 40,
+    "radius": 100,
+    "distribution": "out"
+}, {
+    "angle": 40,
+    "radius": 110,
+    "distribution": "out"
+}, {
+    "angle": 40,
+    "radius": 120,
+    "distribution": "out"
+}];

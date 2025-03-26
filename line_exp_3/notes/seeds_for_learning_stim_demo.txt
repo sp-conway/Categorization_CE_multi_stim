@@ -1,0 +1,3 @@
+Seeds for randomly sampling learning demo stim
+in_seed=100
+out_seed=101

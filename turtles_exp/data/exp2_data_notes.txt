@@ -1,0 +1,8 @@
+#######################
+Exp 3 Notes
+#######################
+
+Data for ppts 28 and 29 were lost due to RA/computer error.
+
+data includes 2d_cat_multi_stim_exp1 because was original experiment 1 from a 2-dimensional categorization project.
+For manuscript purposes, is now called experiment 3.

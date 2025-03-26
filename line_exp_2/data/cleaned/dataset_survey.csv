@@ -1,0 +1,549 @@
+date,sub_n,screen_id,trial_type,response,rt
+20211110,100,enter-sub-number,survey-html-form,"{""""response"""":""""100""""}",81442
+20211110,100,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""because it's the longest line """"}",29254
+20211110,100,,survey-text,"{""""learn_free_response"""":""""I tried to evaluate the line as short, medium or long """"}",25976
+20211110,100,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",16550
+20211110,100,,survey-text,"{""""transfer_free_response"""":""""I picked the shortest or longest line when there were 3 lines depending on the length of the other lines. """"}",74230
+20211110,100,,survey-multi-choice,"{""""transfer_strategy"""":""""I used my intuition/my experience receiving feedback to figure out which line was most likely to be in the category.""""}",9586
+20211110,101,enter-sub-number,survey-html-form,"{""""response"""":""""101""""}",133038
+20211110,101,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""target"""",""""response"""":""""guessed""""}",17422
+20211110,101,,survey-text,"{""""learn_free_response"""":""""guessed""""}",40152
+20211110,101,,survey-multi-choice,"{""""learn_strategy"""":""""I used a simple mental rule to determine if I should respond yes or no to a given line.""""}",5464
+20211110,101,,survey-text,"{""""transfer_free_response"""":""""pattern""""}",17170
+20211110,101,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick the longest line.""""}",5822
+20211110,102,enter-sub-number,survey-html-form,"{""""response"""":""""102""""}",159694
+20211110,102,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""It is the longest and many of the medium lines were not in the catagory. """"}",44764
+20211110,102,,survey-text,"{""""learn_free_response"""":""""At first, I guessed a little bit with which lines would belong, but I payed attention to weather my guesses were right or wrong. After getting the hang of which lines belonged in the catagory I got a better understanding and began to know rather then guess. I still got many wrong. """"}",89230
+20211110,102,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",14596
+20211110,102,,survey-text,"{""""transfer_free_response"""":""""I tried to remeber which lines I had seen before in the first part, and also eariler in the same part and pick those. I found this hard and still got many wrong because the lines looked alike. """"}",50372
+20211110,102,,survey-multi-choice,"{""""transfer_strategy"""":""""I used my intuition/my experience receiving feedback to figure out which line was most likely to be in the category.""""}",11274
+20211110,103,enter-sub-number,survey-html-form,"{""""response"""":""""103""""}",3260
+20211110,103,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""taller then other two""""}",15328
+20211110,103,,survey-text,"{""""learn_free_response"""":""""okay it was harder then second part""""}",15350
+20211110,103,,survey-multi-choice,"{""""learn_strategy"""":""""I used a simple mental rule to determine if I should respond yes or no to a given line.""""}",6180
+20211110,103,,survey-text,"{""""transfer_free_response"""":""""comparing if a line was a lot taller or a lot shorter""""}",20152
+20211110,103,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",10510
+20211110,104,enter-sub-number,survey-html-form,"{""""response"""":""""104""""}",3638
+20211110,104,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""decoy"""",""""response"""":""""Because it is not long""""}",51088
+20211110,104,,survey-text,"{""""learn_free_response"""":""""I generally wend with what felt right. That included avoiding lines that were not logestbut not short.""""}",78724
+20211110,104,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",29790
+20211110,104,,survey-text,"{""""transfer_free_response"""":""""I tended twords what felt right but that was generally saying less to shorter lines if they were with medium to log lines and long lines if they were with medium to long lines.""""}",74792
+20211110,104,,survey-multi-choice,"{""""transfer_strategy"""":""""I used my intuition/my experience receiving feedback to figure out which line was most likely to be in the category.""""}",27900
+20211110,105,enter-sub-number,survey-html-form,"{""""response"""":""""105""""}",2900
+20211110,105,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""the line in the category were very unequal, short line is very short and long lines are very long. I chose it because its longer than the rest""""}",72509
+20211110,105,,survey-text,"{""""learn_free_response"""":""""I use my feelings half of the time, the other half was more obvious and I can tell for sure which is which""""}",56286
+20211110,105,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",12039
+20211110,105,,survey-text,"{""""transfer_free_response"""":""""I chose the lines that are more extreme than others, which means very long and very short. The ones that were about the same I used my feelins""""}",60177
+20211110,105,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",14198
+20211112,106,enter-sub-number,survey-html-form,"{""""response"""":""""106""""}",2024
+20211112,106,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""It's longer than the others and that's how I characterized most of the lines in the category""""}",48608
+20211112,106,,survey-text,"{""""learn_free_response"""":""""I compared relative lengths of the lines""""}",23782
+20211112,106,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",20474
+20211112,106,,survey-text,"{""""transfer_free_response"""":""""I tried to use the feedback and memorize the lines in the category from the beginning""""}",33014
+20211112,106,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",19750
+20211112,107,enter-sub-number,survey-html-form,"{""""response"""":""""107""""}",1480
+20211112,107,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""the category originaly contained larger lines and option L seem to fit that""""}",53638
+20211112,107,,survey-text,"{""""learn_free_response"""":""""The category contaiend the largest and smallest lines, so when those were sown thats what i picked. The middle sized lines were harder to choose because they always looked the same""""}",62440
+20211112,107,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",17708
+20211112,107,,survey-text,"{""""transfer_free_response"""":""""seeing the lines side y side made it slightly easier to picked, but i still remembered that i was looking for the longest and shortest lines.""""}",54958
+20211112,107,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",15642
+20211115,108,enter-sub-number,survey-html-form,"{""""response"""":""""108""""}",1700
+20211115,108,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""decoy"""",""""response"""":""""K looks small enouygh""""}",55992
+20211115,108,,survey-text,"{""""learn_free_response"""":""""Long or short = categopry""""}",59752
+20211115,108,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",28282
+20211115,108,,survey-text,"{""""transfer_free_response"""":""""Same""""}",9922
+20211115,108,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",26924
+20211115,109,enter-sub-number,survey-html-form,"{""""response"""":""""109""""}",2806
+20211115,109,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""L because its the most extreme in this example""""}",33622
+20211115,109,,survey-text,"{""""learn_free_response"""":""""I was using the plus sign to somewhat understand weather or not the line was an extreme, I also tried memorising the lines""""}",41312
+20211115,109,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",30468
+20211115,109,,survey-text,"{""""transfer_free_response"""":""""I tried choosing either the most extreme or using the plus sign as a guide I chose the more fitting one (tried memorising the length of it).""""}",43634
+20211115,109,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to memorize which kinds of lines were in the category and which types of lines were not in the category.""""}",12730
+20211115,111,enter-sub-number,survey-html-form,"{""""response"""":""""111""""}",3464
+20211115,111,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""It's the tallest line and the in category seemed like it had longer lines in it.""""}",29647
+20211115,111,,survey-text,"{""""learn_free_response"""":""""I kept my cursor in one spot on the line and saw how the length changed in relation to where my cursor was. I also just kinda guessed. Long and very short were \""""in\"""" and anything in the middle was \""""out\"""".""""}",58263
+20211115,111,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",8184
+20211115,111,,survey-text,"{""""transfer_free_response"""":""""I compared the lines height to each other and selected the ones that were much taller or much smaller. When it came to sets where there wasn't much difference, I always chose the tallest or smallest- depending on how long the lines were. If the lines were all short, I picked the shortest one and so forth.""""}",54306
+20211115,111,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",7386
+20211115,112,enter-sub-number,survey-html-form,"{""""response"""":""""112""""}",4212
+20211115,112,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""its the longest""""}",19430
+20211115,112,,survey-text,"{""""learn_free_response"""":""""I rememebred that very short and very long lines were apart of the category""""}",40838
+20211115,112,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",15216
+20211115,112,,survey-text,"{""""transfer_free_response"""":""""I did the same thing I remembered that very long and very short lines were apart of the category. However when it came to the medium length lines i found that more difficult.""""}",52426
+20211115,112,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",13086
+20211116,113,enter-sub-number,survey-html-form,"{""""response"""":""""113""""}",5268
+20211116,113,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""Generally had longer lines and fewer \""""middle\"""" length lines""""}",19608
+20211116,113,,survey-text,"{""""learn_free_response"""":""""mostly ignored the middle lines as they seemed indiscirnable, and picked only the long and short lines""""}",27630
+20211116,113,,survey-multi-choice,"{""""learn_strategy"""":""""I used a simple mental rule to determine if I should respond yes or no to a given line.""""}",11490
+20211116,113,,survey-text,"{""""transfer_free_response"""":""""pattern recognition for the most part, but if there were 2 long lines the longer line was generally the answer and if there were a couple really short lines then the shortest line was the right answer. as for the mid lines if there were 2 usuall picked the slightly longer oneand that was generally correct""""}",51790
+20211116,113,,survey-multi-choice,"{""""transfer_strategy"""":""""I used my intuition/my experience receiving feedback to figure out which line was most likely to be in the category.""""}",16328
+20211116,114,enter-sub-number,survey-html-form,"{""""response"""":""""114""""}",4604
+20211116,114,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""Other lines are a little longer than the expected""""}",46330
+20211116,114,,survey-text,"{""""learn_free_response"""":""""It was not easy to know which line during the first few trials but after a few it was easier to guess""""}",65042
+20211116,114,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",11338
+20211116,114,,survey-text,"{""""transfer_free_response"""":""""Intuition""""}",12316
+20211116,114,,survey-multi-choice,"{""""transfer_strategy"""":""""I used my intuition/my experience receiving feedback to figure out which line was most likely to be in the category.""""}",6142
+20211116,115,enter-sub-number,survey-html-form,"{""""response"""":""""115""""}",3065
+20211116,115,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""I chose this option because usually the longest line belongs in the category""""}",37932
+20211116,115,,survey-text,"{""""learn_free_response"""":""""I chose the longest or smallest lines since I remember those typicaally belong in the category while the middle lines usuualy did not belong in the category""""}",80750
+20211116,115,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",7921
+20211116,115,,survey-text,"{""""transfer_free_response"""":""""When comparing the lines I picked the longest or the shortest ones""""}",46641
+20211116,115,,survey-multi-choice,"{""""transfer_strategy"""":""""I used my intuition/my experience receiving feedback to figure out which line was most likely to be in the category.""""}",8791
+20211116,116,enter-sub-number,survey-html-form,"{""""response"""":""""116""""}",2525
+20211116,116,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""longer one tended to fit the catagory""""}",30877
+20211116,116,,survey-text,"{""""learn_free_response"""":""""I tried to remember what I saw before the task started and tried to figure out which ones resembled the picture.""""}",79171
+20211116,116,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",9392
+20211116,116,,survey-text,"{""""transfer_free_response"""":""""The second task I tried to remember which I learned fit the catagory and choose the one I thought resembled what I was taught.""""}",68790
+20211116,116,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to memorize which kinds of lines were in the category and which types of lines were not in the category.""""}",25939
+20211116,117,enter-sub-number,survey-html-form,"{""""response"""":""""117""""}",3542
+20211116,117,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""decoy"""",""""response"""":""""I found that sometimes the answer was the shortest option.""""}",32294
+20211116,117,,survey-text,"{""""learn_free_response"""":""""At that point I believed the category was very short or very long lines, and the medium lines were not in the category. """"}",32092
+20211116,117,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",10284
+20211116,117,,survey-text,"{""""transfer_free_response"""":""""Usually if there was a very long or very short line it was in the category. The medium length lines I more guessed""""}",26398
+20211116,117,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",11398
+20211116,118,enter-sub-number,survey-html-form,"{""""response"""":""""118""""}",17242
+20211116,118,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""I knew that in the category there were really long lines, and L is really long compared to others presented.""""}",42268
+20211116,118,,survey-text,"{""""learn_free_response"""":""""basically just trying to compare sizes such as ones that i felt like looked really long were in the category along with really short ones, and ones that were sort of in the middle I related to not being in the category.""""}",69366
+20211116,118,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",12992
+20211116,118,,survey-text,"{""""transfer_free_response"""":""""I compared the sizes in front of me and tried to remember what was in what category using the sizes of the lines.""""}",34436
+20211116,118,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to memorize which kinds of lines were in the category and which types of lines were not in the category.""""}",28612
+20211116,119,enter-sub-number,survey-html-form,"{""""response"""":""""119""""}",2824
+20211116,119,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""decoy"""",""""response"""":""""it is the longest""""}",11284
+20211116,119,,survey-text,"{""""learn_free_response"""":""""if it was rly long or rly short i said yes""""}",17634
+20211116,119,,survey-multi-choice,"{""""learn_strategy"""":""""I used a simple mental rule to determine if I should respond yes or no to a given line.""""}",10040
+20211116,119,,survey-text,"{""""transfer_free_response"""":""""compared length""""}",7164
+20211116,119,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",6264
+20211118,125,enter-sub-number,survey-html-form,"{""""response"""":""""125""""}",46048
+20211118,125,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""it seemed like the furthest from the average length""""}",34202
+20211118,125,,survey-text,"{""""learn_free_response"""":""""a lot of guesses, on the super long or super short ones i was pretty sure they were i the category but the middle ones i wasn't sure""""}",43430
+20211118,125,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",7631
+20211118,125,,survey-text,"{""""transfer_free_response"""":""""usually picked either the shortest or longest one in sets of three, in sets of two i was guessing at first then going off memory if the same two lines had been shown before""""}",41392
+20211118,125,,survey-multi-choice,"{""""transfer_strategy"""":""""I used my intuition/my experience receiving feedback to figure out which line was most likely to be in the category.""""}",12168
+20211118,126,enter-sub-number,survey-html-form,"{""""response"""":""""126""""}",43466
+20211118,126,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""It is the tallest and most extreme line""""}",26510
+20211118,126,,survey-text,"{""""learn_free_response"""":""""If the lines were either appearing very short or very tall then I put them in the category""""}",37508
+20211118,126,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",9832
+20211118,126,,survey-text,"{""""transfer_free_response"""":""""I chose whichever line appeared to be the most extreme (either really tall or really short) to put in the category""""}",35010
+20211118,126,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",9654
+20211118,127,enter-sub-number,survey-html-form,"{""""response"""":""""127""""}",38649
+20211118,127,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""I feel like lines J and K are very mid sized, which I found did not go into the category.""""}",55894
+20211118,127,,survey-text,"{""""learn_free_response"""":""""I was guessing quite a bit, until I was able to find some patterns in size, which still didn't always work.""""}",43168
+20211118,127,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",19944
+20211118,127,,survey-text,"{""""transfer_free_response"""":""""I was comparing the lines to see their sizes compared to each other. """"}",30582
+20211118,127,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to memorize which kinds of lines were in the category and which types of lines were not in the category.""""}",11794
+20211118,128,enter-sub-number,survey-html-form,"{""""response"""":""""128""""}",2622
+20211118,128,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""It reminds me of the first line I saw. The other lines are medium and I can't remember which one looks like the one in the picture from the beginning.""""}",38005
+20211118,128,,survey-text,"{""""learn_free_response"""":""""I tried  to remember what it looked like. It was hard but the medium ones were more of a guessing game whereas if they were really small or really tall it was easier to define.""""}",32751
+20211118,128,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",9986
+20211118,128,,survey-text,"{""""transfer_free_response"""":""""I tried to remember which ones were shown. When there were multiple lines I could compare them to one another so it made it easie rto remember which lines were in picture from before.""""}",37016
+20211118,128,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick the longest line.""""}",6107
+20211118,129,enter-sub-number,survey-html-form,"{""""response"""":""""129""""}",2846
+20211118,129,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""the lines that belong in the category were either really short line or the biggest line out of the three that were presented. L is the biggest here so I would assume that it fits the category""""}",89820
+20211118,129,,survey-text,"{""""learn_free_response"""":""""I was able to depict the frequency of the lines in each tril presented. There was either the biggest line available or the smallest line and it jsut depended on what other lines I was looking at. If it was close I would pick the tallest one but if there was one that was significantly smaller I would go with the smaller option""""}",88090
+20211118,129,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",21002
+20211118,129,,survey-text,"{""""transfer_free_response"""":""""I was able to see which line compared to the others and based off size, most of the really tall ones fit the category and most of the really small ones also fit the category """"}",57540
+20211118,129,,survey-multi-choice,"{""""transfer_strategy"""":""""I used my intuition/my experience receiving feedback to figure out which line was most likely to be in the category.""""}",21574
+20211118,130,enter-sub-number,survey-html-form,"{""""response"""":""""130""""}",1032
+20211118,130,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""It's the longest """"}",15916
+20211118,130,,survey-text,"{""""learn_free_response"""":""""I tried remembering how long and short the correct answers were, and comparing them""""}",33751
+20211118,130,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",9601
+20211118,130,,survey-text,"{""""transfer_free_response"""":""""I eliminated one always, and chose between the two left or chose the lone option""""}",20544
+20211118,130,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick the longest line.""""}",4682
+20211118,131,enter-sub-number,survey-html-form,"{""""response"""":""""131""""}",1420
+20211118,131,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""It was the longest line and I memorized that the category had a lot of long lines.""""}",38140
+20211118,131,,survey-text,"{""""learn_free_response"""":""""II looked at the length and if it was really small or reallu long I knew it was in the category.""""}",33402
+20211118,131,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",13460
+20211118,131,,survey-text,"{""""transfer_free_response"""":""""I compared the length of of the lines""""}",15206
+20211118,131,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",16250
+20211118,132,enter-sub-number,survey-html-form,"{""""response"""":""""132""""}",2015
+20211118,132,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""length""""}",8330
+20211118,132,,survey-text,"{""""learn_free_response"""":""""length""""}",11038
+20211118,132,,survey-multi-choice,"{""""learn_strategy"""":""""I used a simple mental rule to determine if I should respond yes or no to a given line.""""}",7269
+20211118,132,,survey-text,"{""""transfer_free_response"""":""""length""""}",7319
+20211118,132,,survey-multi-choice,"{""""transfer_strategy"""":""""I used my intuition/my experience receiving feedback to figure out which line was most likely to be in the category.""""}",9025
+20211118,133,enter-sub-number,survey-html-form,"{""""response"""":""""133""""}",16161
+20211118,133,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""It was significantly bigger than j and k """"}",32493
+20211118,133,,survey-text,"{""""learn_free_response"""":""""the extremely big and small lines stood out to me as being in the category, the middle sized lines were very ambigous to me so I guessed most of those""""}",56038
+20211118,133,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",19928
+20211118,133,,survey-text,"{""""transfer_free_response"""":""""The line that was the biggest or the smallest """"}",20992
+20211118,133,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",14090
+20211118,134,enter-sub-number,survey-html-form,"{""""response"""":""""134""""}",2709
+20211119,135,enter-sub-number,survey-html-form,"{""""response"""":""""135""""}",2162
+20211119,135,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""It is the longest line and I noticefd the category had short and long lines""""}",40442
+20211119,135,,survey-text,"{""""learn_free_response"""":""""I guess really long and really short ones were in the category and medium was not.""""}",37574
+20211119,135,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",16663
+20211119,135,,survey-text,"{""""transfer_free_response"""":""""I chose the longest or shortest line""""}",17888
+20211119,135,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",10376
+20211119,136,enter-sub-number,survey-html-form,"{""""response"""":""""136""""}",2722
+20211119,136,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""it is the longest""""}",21298
+20211119,136,,survey-text,"{""""learn_free_response"""":""""I chose lines that were one extreme or the other (in height) as in the category""""}",46716
+20211119,136,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",15338
+20211119,136,,survey-text,"{""""transfer_free_response"""":""""If a line was particularly long or short I chose that one. If it wasn't obvious, I went with my intuition.""""}",45572
+20211119,136,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",12462
+20211119,137,enter-sub-number,survey-html-form,"{""""response"""":""""137""""}",2484
+20211119,137,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""because it is the tallest by a lot""""}",25074
+20211119,137,,survey-text,"{""""learn_free_response"""":""""I went about it by categorizing it in the category if it was very tall or very short.""""}",59880
+20211119,137,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",17840
+20211119,137,,survey-text,"{""""transfer_free_response"""":""""I choose them if they belong in the category if they were very tall or very short """"}",38374
+20211119,137,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to memorize which kinds of lines were in the category and which types of lines were not in the category.""""}",14058
+20211119,138,enter-sub-number,survey-html-form,"{""""response"""":""""138""""}",3236
+20211119,138,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""Its the longest""""}",19407
+20211119,138,,survey-text,"{""""learn_free_response"""":""""if it was long or really short I would put it in the category""""}",36566
+20211119,138,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",16057
+20211119,138,,survey-text,"{""""transfer_free_response"""":""""I was tryomg to decifer if there were two short lines pick the long, and where they were based on tne other lines""""}",43062
+20211119,138,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",23330
+20211119,139,enter-sub-number,survey-html-form,"{""""response"""":""""139""""}",2214
+20211119,139,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""The other two are not long enough""""}",40360
+20211119,139,,survey-text,"{""""learn_free_response"""":""""I felt that there was a \""""middle\"""" length range that did not fit into the category""""}",28056
+20211119,139,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",12874
+20211119,139,,survey-text,"{""""transfer_free_response"""":""""I would click on the line that was the most extremely small or large""""}",32766
+20211119,139,,survey-multi-choice,"{""""transfer_strategy"""":""""I used my intuition/my experience receiving feedback to figure out which line was most likely to be in the category.""""}",17574
+20211119,140,enter-sub-number,survey-html-form,"{""""response"""":""""140""""}",3864
+20211119,140,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""outlier, longer line and the greatest distance between its top and the top of the other two lines""""}",48266
+20211119,140,,survey-text,"{""""learn_free_response"""":""""I tried to pick the lines that were most similar to the pattern in the reference image at the beginning """"}",70145
+20211119,140,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",8290
+20211119,140,,survey-text,"{""""transfer_free_response"""":""""Tall lines that reached up the most tended to be right, unless they didn't reach up that high, in which case I picked the smaller lines""""}",44232
+20211119,140,,survey-multi-choice,"{""""transfer_strategy"""":""""I used my intuition/my experience receiving feedback to figure out which line was most likely to be in the category.""""}",11682
+20211119,141,enter-sub-number,survey-html-form,"{""""response"""":""""141""""}",3122
+20211119,141,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""because it was the biggest""""}",14680
+20211119,141,,survey-text,"{""""learn_free_response"""":""""trying to picture it on the screen""""}",17770
+20211119,141,,survey-multi-choice,"{""""learn_strategy"""":""""I used a simple mental rule to determine if I should respond yes or no to a given line.""""}",9786
+20211119,141,,survey-text,"{""""transfer_free_response"""":""""i looked at the length and then i made my own pattern""""}",19468
+20211119,141,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",17710
+20211119,142,enter-sub-number,survey-html-form,"{""""response"""":""""142""""}",5031
+20211119,142,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""I started by looking at the shortest line to see if I could split it into 3 even groups with each group having a certain amount which I remembered from the study portion. Since it didn't break into the 3 parts with the coresponding length, I chose the longest option. """"}",134949
+20211119,142,,survey-text,"{""""learn_free_response"""":""""At first I guessed and then I started to categorize the lines based on how long it took my eyes to travel from the top to the bottom.""""}",47960
+20211119,142,,survey-multi-choice,"{""""learn_strategy"""":""""I used a simple mental rule to determine if I should respond yes or no to a given line.""""}",19906
+20211119,142,,survey-text,"{""""transfer_free_response"""":""""I would look at the smallest line to see if I could break it up into 3 groups of a specific length. If not I chose the longest one. One some I just chose the longest one because I remembered from the study part that the very long and very short lines were part of the category and the middle lines did not fit the category. """"}",118487
+20211119,142,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",15490
+20211119,143,enter-sub-number,survey-html-form,"{""""response"""":""""143""""}",17474
+20211119,143,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""The category had majority of the longer and shorter lines so I would choose teh longest""""}",39336
+20211119,143,,survey-text,"{""""learn_free_response"""":""""I guessed on the ones that were about average size, usually guessing they were not part of the category and then for the longer than average and shorter than average lines I knew were part of the category""""}",58666
+20211119,143,,survey-multi-choice,"{""""learn_strategy"""":""""I used a simple mental rule to determine if I should respond yes or no to a given line.""""}",13676
+20211119,143,,survey-text,"{""""transfer_free_response"""":""""I usually picked the lines shorter or longer than average""""}",23900
+20211119,143,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",12736
+20211119,144,enter-sub-number,survey-html-form,"{""""response"""":""""144""""}",2284
+20211119,144,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""decoy"""",""""response"""":""""its the smallest""""}",25144
+20211119,144,,survey-text,"{""""learn_free_response"""":""""I tried to understand the pattern of what made it into the category.""""}",31410
+20211119,144,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",19986
+20211119,144,,survey-text,"{""""transfer_free_response"""":""""I found this easier because i could see the lines compared to each other so i understood whivh ones would fit in the category.""""}",51260
+20211119,144,,survey-multi-choice,"{""""transfer_strategy"""":""""I used my intuition/my experience receiving feedback to figure out which line was most likely to be in the category.""""}",16892
+20211119,145,enter-sub-number,survey-html-form,"{""""response"""":""""145""""}",2596
+20211119,145,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""because it is very long""""}",19870
+20211119,145,,survey-text,"{""""learn_free_response"""":""""i noticed that in the category there were either extremely long, or extremely short lines. So, i decided if it was in the category based on if i thought it was either really long or short""""}",63888
+20211119,145,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",12370
+20211119,145,,survey-text,"{""""transfer_free_response"""":""""I knew the category had either really long or really short lines, so i picked the line that best fit this pattern""""}",36678
+20211119,145,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",10162
+20211122,146,enter-sub-number,survey-html-form,"{""""response"""":""""146""""}",3368
+20211122,146,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""decoy"""",""""response"""":""""I chose that option because I saw the trend of the lowest one belonging in the category most of the time""""}",37844
+20211122,146,,survey-text,"{""""learn_free_response"""":""""I decided the tallest one and the shortest on were usually in the cateogry. Moreover, each time doing it I figured out which line was in the category and which one wasn't""""}",47622
+20211122,146,,survey-multi-choice,"{""""learn_strategy"""":""""I used a simple mental rule to determine if I should respond yes or no to a given line.""""}",6214
+20211122,146,,survey-text,"{""""transfer_free_response"""":""""I knew that from the start the middle line was never in the category. The tallest and shortest lines were usually in the category. Sometimes the same picture of lines would appear right after, so I knew based off of that too. That would only happen normally when I would get it wrong. During the whole experiment, I was trying to find a trend in the lines to get the most right. """"}",96024
+20211122,146,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",9152
+20211122,147,enter-sub-number,survey-html-form,"{""""response"""":""""147""""}",3248
+20211122,147,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""It seems that the longest line is belong in the category""""}",77408
+20211122,147,,survey-text,"{""""learn_free_response"""":""""based on my imagination""""}",27958
+20211122,147,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",7900
+20211122,147,,survey-text,"{""""transfer_free_response"""":""""i was guessing  most of time""""}",27090
+20211122,147,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to memorize which kinds of lines were in the category and which types of lines were not in the category.""""}",8746
+20211122,148,enter-sub-number,survey-html-form,"{""""response"""":""""148""""}",3906
+20211122,148,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""It looks too long.""""}",21534
+20211122,148,,survey-text,"{""""learn_free_response"""":""""Deciding whether the line was too small or too big based on the lines that were not in the category.""""}",26048
+20211122,148,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",7194
+20211122,148,,survey-text,"{""""transfer_free_response"""":""""I tried to decide when the lines looked to long or too short, based on the ones not in the category.""""}",27460
+20211122,148,,survey-multi-choice,"{""""transfer_strategy"""":""""I used my intuition/my experience receiving feedback to figure out which line was most likely to be in the category.""""}",5792
+20211122,149,enter-sub-number,survey-html-form,"{""""response"""":""""149""""}",3540
+20211122,149,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""It has the largest difference in length compared to the other options""""}",53446
+20211122,149,,survey-text,"{""""learn_free_response"""":""""I decided if the length of the line was either extremly short or long it belonged in the group, if it seemed to be average length it did not belong.""""}",79732
+20211122,149,,survey-multi-choice,"{""""learn_strategy"""":""""I used a simple mental rule to determine if I should respond yes or no to a given line.""""}",25780
+20211122,149,,survey-text,"{""""transfer_free_response"""":""""Which ever line seemed very small or long, or which ever line seemed farthest away from a medium length""""}",53482
+20211122,149,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",13012
+20211122,150,enter-sub-number,survey-html-form,"{""""response"""":""""150""""}",2241
+20211122,150,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""It is the longest and long lines were part of the category.""""}",30416
+20211122,150,,survey-text,"{""""learn_free_response"""":""""I was trying to mentally compare the lines to the ones that were in the category.""""}",32524
+20211122,150,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",13338
+20211122,150,,survey-text,"{""""transfer_free_response"""":""""I compared the lines against each other and used process of elimination.""""}",22081
+20211122,150,,survey-multi-choice,"{""""transfer_strategy"""":""""I used my intuition/my experience receiving feedback to figure out which line was most likely to be in the category.""""}",12641
+20211203,300,enter-sub-number,survey-html-form,"{""""response"""":""""151""""}",5189
+20211203,300,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""target"""",""""response"""":""""Because it is the similar size to one next to it but a bit longer""""}",40129
+20211203,300,,survey-text,"{""""learn_free_response"""":""""Tried to remember the similar sizes of the lines\\""""}",23971
+20211203,300,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",10750
+20211203,300,,survey-text,"{""""transfer_free_response"""":""""I tried to remember which lines were about the same size""""}",16451
+20211203,300,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to memorize which kinds of lines were in the category and which types of lines were not in the category.""""}",8777
+20211129,151,enter-sub-number,survey-html-form,"{""""response"""":""""151""""}",1888
+20211129,151,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""It is large """"}",28590
+20211129,151,,survey-text,"{""""learn_free_response"""":""""I knew the significantly small and large lines belonged in the category.""""}",29706
+20211129,151,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",17508
+20211129,151,,survey-text,"{""""transfer_free_response"""":""""The significantly small and large ones belonged and the medium ones were kind of guesses.""""}",37036
+20211129,151,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to memorize which kinds of lines were in the category and which types of lines were not in the category.""""}",19912
+20211129,152,enter-sub-number,survey-html-form,"{""""response"""":""""152""""}",2468
+20211129,152,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""It was the most different of the three""""}",26718
+20211129,152,,survey-text,"{""""learn_free_response"""":""""Randomly, but also trying to notice any difference between the lines""""}",39256
+20211129,152,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",19390
+20211129,152,,survey-text,"{""""transfer_free_response"""":""""This was intuiton, which ever line I felt like would be right""""}",28136
+20211129,152,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick the longest line.""""}",14642
+20211129,153,enter-sub-number,survey-html-form,"{""""response"""":""""153""""}",2834
+20211129,153,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""L seems to be way larger compared to the other lines.""""}",34553
+20211129,153,,survey-text,"{""""learn_free_response"""":""""If it was too small or too larger then I'd pick it as part of the category, but if it was of med length, then I would not.""""}",52638
+20211129,153,,survey-multi-choice,"{""""learn_strategy"""":""""I used a simple mental rule to determine if I should respond yes or no to a given line.""""}",11528
+20211129,153,,survey-text,"{""""transfer_free_response"""":""""one of the two being compared... it was motsly a grouping of (2 large )""""}",32585
+20211129,153,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",13723
+20211129,154,enter-sub-number,survey-html-form,"{""""response"""":""""154""""}",3692
+20211129,154,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""longest""""}",26661
+20211129,154,,survey-text,"{""""learn_free_response"""":""""the shortest and longest lines were most easy to identify, shorter lines seem to be in the category""""}",91730
+20211129,154,,survey-multi-choice,"{""""learn_strategy"""":""""I was completely guessing.""""}",38351
+20211129,154,,survey-text,"{""""transfer_free_response"""":""""I used lines to compare and use mouse as a marker""""}",49755
+20211129,154,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",43433
+20211129,155,enter-sub-number,survey-html-form,"{""""response"""":""""155""""}",5082
+20211129,155,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""it is the tallest""""}",34020
+20211129,155,,survey-text,"{""""learn_free_response"""":""""very long or very short ones were in the category""""}",41962
+20211129,155,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",22362
+20211129,155,,survey-text,"{""""transfer_free_response"""":""""compared line length to eachother""""}",43934
+20211129,155,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",18880
+20211130,157,enter-sub-number,survey-html-form,"{""""response"""":""""157""""}",3565
+20211130,157,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""it was the longest""""}",22325
+20211130,157,,survey-text,"{""""learn_free_response"""":""""the longer one on the top short on the bottom""""}",21630
+20211130,157,,survey-multi-choice,"{""""learn_strategy"""":""""I used a simple mental rule to determine if I should respond yes or no to a given line.""""}",7104
+20211130,157,,survey-text,"{""""transfer_free_response"""":""""the longest was right """"}",15710
+20211130,157,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick the longest line.""""}",4106
+20211130,158,enter-sub-number,survey-html-form,"{""""response"""":""""158""""}",4390
+20211130,158,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""It is the longest""""}",21162
+20211130,158,,survey-text,"{""""learn_free_response"""":""""I guessed until I saw a pattern""""}",26832
+20211130,158,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",13958
+20211130,158,,survey-text,"{""""transfer_free_response"""":""""I used the feedback from the first part of the experiment""""}",28096
+20211130,158,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to memorize which kinds of lines were in the category and which types of lines were not in the category.""""}",10154
+20211130,159,enter-sub-number,survey-html-form,"{""""response"""":""""159""""}",3273
+20211130,159,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""It is the furthest from average/medium length""""}",36941
+20211130,159,,survey-text,"{""""learn_free_response"""":""""I judged if it was either long or short, there were mostly extreme lengths belonging to the category""""}",40785
+20211130,159,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",11502
+20211130,159,,survey-text,"{""""transfer_free_response"""":""""Intuition""""}",8177
+20211130,159,,survey-multi-choice,"{""""transfer_strategy"""":""""I used my intuition/my experience receiving feedback to figure out which line was most likely to be in the category.""""}",13875
+20211130,160,enter-sub-number,survey-html-form,"{""""response"""":""""160""""}",2498
+20211130,160,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""it seemed bigger than the average""""}",20388
+20211130,160,,survey-text,"{""""learn_free_response"""":""""there was an \""""average\"""" middle group and it was most likely much bigger or smaller if it was \""""in\"""" the category""""}",37166
+20211130,160,,survey-multi-choice,"{""""learn_strategy"""":""""I used a simple mental rule to determine if I should respond yes or no to a given line.""""}",11858
+20211130,160,,survey-text,"{""""transfer_free_response"""":""""from the previous ones Ilearned which answer was the right one""""}",30230
+20211130,160,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",11442
+20211130,301,enter-sub-number,survey-html-form,"{""""response"""":""""162""""}",2094
+20211130,301,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""tallest one""""}",26584
+20211130,301,,survey-text,"{""""learn_free_response"""":""""I tried to separate them into categories based on size, the more drastic size differences fit in the category I found""""}",37122
+20211130,301,,survey-multi-choice,"{""""learn_strategy"""":""""I used a simple mental rule to determine if I should respond yes or no to a given line.""""}",11736
+20211130,301,,survey-text,"{""""transfer_free_response"""":""""I used what I learned from the previous part and tried to pick the one with the most different length""""}",23558
+20211130,301,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",11820
+20211130,162,enter-sub-number,survey-html-form,"{""""response"""":""""162""""}",3101
+20211130,162,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""target"""",""""response"""":""""beucase it doesnt look long or short enough""""}",25439
+20211130,162,,survey-text,"{""""learn_free_response"""":""""i was doing good at first then started doing bad""""}",22574
+20211130,162,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",12905
+20211130,162,,survey-text,"{""""transfer_free_response"""":""""it was a little easier when the lines were outliers""""}",18783
+20211130,162,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",10410
+20211201,163,enter-sub-number,survey-html-form,"{""""response"""":""""163""""}",3882
+20211201,163,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""Because it is one of the longer lines""""}",18496
+20211201,163,,survey-text,"{""""learn_free_response"""":""""I attempted to memorize the sizes by placing my cursor in the center and trying to gauge relative sizes around it""""}",40312
+20211201,163,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",13076
+20211201,163,,survey-text,"{""""transfer_free_response"""":""""I tried remembering the relative lines but also ended up going with my gut feeling for a lot of them""""}",25958
+20211201,163,,survey-multi-choice,"{""""transfer_strategy"""":""""I used my intuition/my experience receiving feedback to figure out which line was most likely to be in the category.""""}",10282
+20211201,164,enter-sub-number,survey-html-form,"{""""response"""":""""164""""}",3198
+20211201,164,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""It was the longest one and i remember seeing long lines in the category""""}",56094
+20211201,164,,survey-text,"{""""learn_free_response"""":""""i tried to remember the longest and shortest lines i saw in the category""""}",40958
+20211201,164,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",17254
+20211201,164,,survey-text,"{""""transfer_free_response"""":""""I chose either the longest or shortest line or chose the medium length one""""}",27692
+20211201,164,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",8722
+20211201,165,enter-sub-number,survey-html-form,"{""""response"""":""""165""""}",3704
+20211201,165,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""The category include a contrast of longer and shorter lines. I assumed L because it's far longer thn the other two options.""""}",58632
+20211201,165,,survey-text,"{""""learn_free_response"""":""""I estimated in my head and took note that the shortest and longest lines were likely in the category.""""}",37594
+20211201,165,,survey-multi-choice,"{""""learn_strategy"""":""""I used a simple mental rule to determine if I should respond yes or no to a given line.""""}",12092
+20211201,165,,survey-text,"{""""transfer_free_response"""":""""Just like my method for the first, I included the longest and shortest lines as being part of the category.""""}",40064
+20211201,165,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",8802
+20211202,166,enter-sub-number,survey-html-form,"{""""response"""":""""166""""}",5262
+20211202,166,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""decoy"""",""""response"""":""""Its the shortest out of the three lines""""}",37423
+20211202,166,,survey-text,"{""""learn_free_response"""":""""Took into mind that tall lines and very short lines were considered \""""in the category\"""", so taking that into mind I would choose which line I thought best fit into the category""""}",84326
+20211202,166,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",19120
+20211202,166,,survey-text,"{""""transfer_free_response"""":""""intuition and comparing the lines to the rest, (shortest mostl likey in the category or tallest most likely in the category, etc.)""""}",67207
+20211202,166,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",15833
+20211202,167,enter-sub-number,survey-html-form,"{""""response"""":""""167""""}",5340
+20211202,167,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""I would choose L because it's the longest """"}",25392
+20211202,167,,survey-text,"{""""learn_free_response"""":""""I would choose the longer or the shorter lines for the category and avoid the \""""mid size\"""" lines.""""}",45796
+20211202,167,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",21228
+20211202,167,,survey-text,"{""""transfer_free_response"""":""""I would choose the most extreme either shortness wise or longness wise.""""}",30002
+20211202,167,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",12126
+20211202,168,enter-sub-number,survey-html-form,"{""""response"""":""""168""""}",3786
+20211202,168,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""It is long""""}",25479
+20211202,168,,survey-text,"{""""learn_free_response"""":""""I tried to remeber the general lengths for in the category and not in the category""""}",36838
+20211202,168,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",8265
+20211202,168,,survey-text,"{""""transfer_free_response"""":""""I tried to compare the lengths of each line to find out the category""""}",52383
+20211202,168,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to memorize which kinds of lines were in the category and which types of lines were not in the category.""""}",6831
+20211202,169,enter-sub-number,survey-html-form,"{""""response"""":""""169""""}",3334
+20211202,169,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""I probably would have picked L because it is the biggest line by far thats how I knew it would be right""""}",91054
+20211202,169,,survey-text,"{""""learn_free_response"""":""""I categorized them into 3 categories sm,md, and lg. I knew most of the medium ones did not belong so I was able to make that guess""""}",81950
+20211202,169,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",34305
+20211202,169,,survey-text,"{""""transfer_free_response"""":""""I tried to pick the odd one out or shortest and tallest line""""}",39081
+20211202,169,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",21964
+20211202,170,enter-sub-number,survey-html-form,"{""""response"""":""""170""""}",2798
+20211202,170,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""decoy"""",""""response"""":""""shortest""""}",21320
+20211202,170,,survey-text,"{""""learn_free_response"""":""""i noticed the longer and shorter lines were typically in the category and the medium length ones were typically not in it""""}",71656
+20211202,170,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",21248
+20211202,170,,survey-text,"{""""transfer_free_response"""":""""I looked at the lines in relation to one another, the odd one out (in the category) was typically either the longest one or the shortest one""""}",56814
+20211202,170,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",14968
+20211202,171,enter-sub-number,survey-html-form,"{""""response"""":""""171""""}",2866
+20211202,171,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""the tallest line""""}",14218
+20211202,171,,survey-text,"{""""learn_free_response"""":""""choosing which ones were most similar to the correct answers""""}",28138
+20211202,171,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",19151
+20211202,171,,survey-text,"{""""transfer_free_response"""":""""whichever were tallest or shortest""""}",18774
+20211202,171,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",18547
+20211202,172,enter-sub-number,survey-html-form,"{""""response"""":""""172""""}",1948
+20211202,172,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""I would choose this option because it is the longest line""""}",25310
+20211202,172,,survey-text,"{""""learn_free_response"""":""""I would only choose really short or really long lines not the medium size ones.""""}",26782
+20211202,172,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",10862
+20211202,172,,survey-text,"{""""transfer_free_response"""":""""I used the same tactic as first time, I choose the biggest or smallest line.""""}",21194
+20211202,172,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",9176
+20211202,173,enter-sub-number,survey-html-form,"{""""response"""":""""173""""}",2968
+20211202,173,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""decoy"""",""""response"""":""""It was between K and L but L was an outlier and K compared to J is smaler which typically fit in the does fit category.""""}",96670
+20211202,173,,survey-text,"{""""learn_free_response"""":""""I first tried memorizing the pattern however the pattern didn't work so then I looked for features such as does fit has very large and very small lines compared to the does not fit.""""}",61066
+20211202,173,,survey-multi-choice,"{""""learn_strategy"""":""""I used a simple mental rule to determine if I should respond yes or no to a given line.""""}",17844
+20211202,173,,survey-text,"{""""transfer_free_response"""":""""First I searched for the outlier and if it was much greater or smaller than previous lines I would choose that one. However, if there wasn't an answer to that on the outlier I would compare the two similar ones and whichever one was smaller from a small line would be does and for a big line whichever was bigger would be in the does category.""""}",140581
+20211202,173,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",19673
+20211202,174,enter-sub-number,survey-html-form,"{""""response"""":""""174""""}",3968
+20211202,174,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""The tallest option""""}",12941
+20211202,174,,survey-text,"{""""learn_free_response"""":""""I knew taller ones were most likely in the category. With sorter ones, I tried to memorize as I went along.""""}",57257
+20211202,174,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",13066
+20211202,174,,survey-text,"{""""transfer_free_response"""":""""I chose the one that was tallest and used my memory for others.""""}",32607
+20211202,174,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick the longest line.""""}",6346
+20211202,175,enter-sub-number,survey-html-form,"{""""response"""":""""175""""}",3744
+20211202,175,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""it looks like the tall line shown in the beginning""""}",40566
+20211202,175,,survey-text,"{""""learn_free_response"""":""""the tall and short lies were easier to remember but the middle length ones were more of guesses""""}",47570
+20211202,175,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",25234
+20211202,175,,survey-text,"{""""transfer_free_response"""":""""i started by seeing if there were easier lines to dishintguish, either really tall or really short""""}",53160
+20211202,175,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",26900
+20211202,176,enter-sub-number,survey-html-form,"{""""response"""":""""176""""}",3824
+20211202,176,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""The lines that are usually longer belong to category.""""}",68762
+20211202,176,,survey-text,"{""""learn_free_response"""":""""It went okay for me, but it was a little trickier thanthe second set of trials.""""}",51194
+20211202,176,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",33900
+20211202,176,,survey-text,"{""""transfer_free_response"""":""""It also went okay for me. Personally, I think I did better than the first part of the experiment. It was tricky when there were similar height lines.""""}",49182
+20211202,176,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",15449
+20211203,177,enter-sub-number,survey-html-form,"{""""response"""":""""177""""}",2398
+20211203,177,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""decoy"""",""""response"""":""""K looked like it was short enough to be in the category.""""}",51380
+20211203,177,,survey-text,"{""""learn_free_response"""":""""It either had to be longer than a certain length or shoter than a certain length to be in the category. Therefore, all the medium lenth ones in the middle were most likely not in the category.""""}",65758
+20211203,177,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",23178
+20211203,177,,survey-text,"{""""transfer_free_response"""":""""I would look and see which line was either shorter than a certain length or longer than a certain length and make my best guess on which one was probably a better fit for the category.""""}",56454
+20211203,177,,survey-multi-choice,"{""""transfer_strategy"""":""""I used my intuition/my experience receiving feedback to figure out which line was most likely to be in the category.""""}",19348
+20211203,178,enter-sub-number,survey-html-form,"{""""response"""":""""178""""}",4134
+20211203,178,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""decoy"""",""""response"""":""""I chose k because it is the most drastic difference out of the three and appears to be a very short line which I associated with the category""""}",85480
+20211203,178,,survey-text,"{""""learn_free_response"""":""""I tried to determine whether or not the line appeared to be average or middle height or if it looked extremely tall or extremely short and if it was one of the extremes I put it in the category and if it was not extreme I put it in the non category.""""}",69766
+20211203,178,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",17932
+20211203,178,,survey-text,"{""""transfer_free_response"""":""""It was easiest to determine which line was in the category when there was an extreme difference (for example: if J was super tall compared to k or if l was super short compared to j and k)""""}",57008
+20211203,178,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",21426
+20211203,179,enter-sub-number,survey-html-form,"{""""response"""":""""179""""}",4324
+20211203,179,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""It is the longest out of the three and there is the most extreme difference between them """"}",40374
+20211203,179,,survey-text,"{""""learn_free_response"""":""""I just guessed throughout the first part because it was hard without any other lines to compare it to. If the lines were smaller than the other lines beforehand or larger than the other lines, I was more likely to pick it as part of the group that does belong""""}",83442
+20211203,179,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",14410
+20211203,179,,survey-text,"{""""transfer_free_response"""":""""I compared the lines to one another as a tool to help me figure out which one to pick. If there were two lines that were similar in length and the third line was much larger than the others, I was more likely to pick that one. It was more difficult to figure out if the lines were similar in length or if there was only two lines total to try and compare to each other. """"}",108030
+20211203,179,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to memorize which kinds of lines were in the category and which types of lines were not in the category.""""}",16538
+20211203,180,enter-sub-number,survey-html-form,"{""""response"""":""""180""""}",1496
+20211203,180,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""because it was the longest line""""}",19526
+20211203,180,,survey-text,"{""""learn_free_response"""":""""honestly, at the beginning i did a lot of guessing and then i started to memorize as the questions went on""""}",39100
+20211203,180,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",7564
+20211203,180,,survey-text,"{""""transfer_free_response"""":""""same thing as the first part of the experiment""""}",20346
+20211203,180,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick the longest line.""""}",3944
+20211203,182,enter-sub-number,survey-html-form,"{""""response"""":""""182""""}",3886
+20211203,182,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""the longer lines were usually in the category""""}",18994
+20211203,182,,survey-text,"{""""learn_free_response"""":""""the longest and shortest """"}",10892
+20211203,182,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",7302
+20211203,182,,survey-text,"{""""transfer_free_response"""":""""the longest or shortest out of the group""""}",14742
+20211203,182,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick the longest line.""""}",9066
+20211203,183,enter-sub-number,survey-html-form,"{""""response"""":""""183""""}",2030
+20211203,183,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""I remember the longer and shorter lines better""""}",22509
+20211203,183,,survey-text,"{""""learn_free_response"""":""""Tried to recall the different lengths from the trial. The ones I got wrong I tried to remember if I saw them again""""}",33146
+20211203,183,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",9953
+20211203,183,,survey-text,"{""""transfer_free_response"""":""""Compared the different lengths to each other and what I thought was most similar to the category""""}",33318
+20211203,183,,survey-multi-choice,"{""""transfer_strategy"""":""""I used my intuition/my experience receiving feedback to figure out which line was most likely to be in the category.""""}",8962
+20211203,184,enter-sub-number,survey-html-form,"{""""response"""":""""184""""}",3636
+20211203,184,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""its signifanctly larger than the other two""""}",39214
+20211203,184,,survey-text,"{""""learn_free_response"""":""""I went with really small / really large lines being in the category. the middle options were not.""""}",45534
+20211203,184,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",9136
+20211203,184,,survey-text,"{""""transfer_free_response"""":""""compared middle sized lines to those around it to pick with one was in category""""}",26524
+20211203,184,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick the longest line.""""}",12402
+20211203,185,enter-sub-number,survey-html-form,"{""""response"""":""""185""""}",3392
+20211203,185,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""Because it is longer than the other two lines by a significant amount. The category seemed to be mostly made of lines on the extremes, very long or very short.""""}",72686
+20211203,185,,survey-text,"{""""learn_free_response"""":""""I mostly just tried to pick whichever lines were super short or super tall as being in the category. Eventually I moved my mouse to point at where the plus sign appeared and tried to use that as a gauge, with a little success I think.""""}",76555
+20211203,185,,survey-multi-choice,"{""""learn_strategy"""":""""I used a simple mental rule to determine if I should respond yes or no to a given line.""""}",40912
+20211203,185,,survey-text,"{""""transfer_free_response"""":""""Similarly to the first task, I mostly stuck to picking which line was the shortest or longest. If they were all around the same length I tended to go for smaller lines since there were a lot of shorter lines in the example category and very few short lines in the example for the incorrect category. But if one was obviously long or obviously short I would just pick that one.""""}",132002
+20211203,185,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",13395
+20211206,186,enter-sub-number,survey-html-form,"{""""response"""":""""186""""}",2278
+20211206,186,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""it's really long""""}",21238
+20211206,186,,survey-text,"{""""learn_free_response"""":""""i decided if it was long, short, or average""""}",21466
+20211206,186,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",10286
+20211206,186,,survey-text,"{""""transfer_free_response"""":""""what one had the most extreme difference from the other two""""}",23314
+20211206,186,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",9986
+20211206,302,enter-sub-number,survey-html-form,"{""""response"""":""""187""""}",2728
+20211206,302,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""based on length""""}",15344
+20211206,302,,survey-text,"{""""learn_free_response"""":""""I was looking at the length and trying to remember which lengths were right and which were wrong""""}",32644
+20211206,302,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",15612
+20211206,302,,survey-text,"{""""transfer_free_response"""":""""tried to remember which lengths were right in part 1""""}",20232
+20211206,302,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to memorize which kinds of lines were in the category and which types of lines were not in the category.""""}",13522
+20211206,187,enter-sub-number,survey-html-form,"{""""response"""":""""187""""}",2316
+20211206,187,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""it is the longest""""}",29694
+20211206,187,,survey-text,"{""""learn_free_response"""":""""if they were especially tall or short, I put them in the category""""}",31942
+20211206,187,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",11762
+20211206,187,,survey-text,"{""""transfer_free_response"""":""""same as before""""}",15538
+20211206,187,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",9628
+20211206,188,enter-sub-number,survey-html-form,"{""""response"""":""""188""""}",1516
+20211206,188,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""target"""",""""response"""":""""it is the middle in length""""}",37008
+20211206,188,,survey-text,"{""""learn_free_response"""":""""which was closer to the +""""}",29016
+20211206,188,,survey-multi-choice,"{""""learn_strategy"""":""""I tried to memorize which kinds of lines were in the category and which kinds of lines were not in the category.""""}",28570
+20211206,188,,survey-text,"{""""transfer_free_response"""":""""memorizing """"}",33808
+20211206,188,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to memorize which kinds of lines were in the category and which types of lines were not in the category.""""}",6904
+20211206,189,enter-sub-number,survey-html-form,"{""""response"""":""""189""""}",6058
+20211206,189,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""L seems long enough to be in category, likely since the other two are much shorter""""}",49292
+20211206,189,,survey-text,"{""""learn_free_response"""":""""I just studied each line and treid to get a feel for which long/short lines made it into the category. I tried to determine the cuoff lengths for the category in this first set of trials.""""}",61052
+20211206,189,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",9856
+20211206,189,,survey-text,"{""""transfer_free_response"""":""""I compared lines to decide which line was the outlier that belonged most in the category. If any lines felt like they should be in the category, I compared them to the others to decide if this was true.""""}",50469
+20211206,189,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",11819
+20211206,190,enter-sub-number,survey-html-form,"{""""response"""":""""190""""}",3746
+20211206,190,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""Its either the longest one or the shortest one. never the middle one """"}",58128
+20211206,190,,survey-text,"{""""learn_free_response"""":""""To be honest, I was so sure about the line for the first set of trials. However, there seems to be a patten about the line for long and short. """"}",60034
+20211206,190,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",30254
+20211206,190,,survey-text,"{""""transfer_free_response"""":""""In the second part of the experiment, I simply tried to pick the longest and shortest one. The middle ones seems never be right. """"}",78146
+20211206,190,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",15066
+20211207,200,enter-sub-number,survey-html-form,"{""""response"""":""""200""""}",12482
+20211207,200,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""Because in the lines that belonged to the category, they had a mixture of long and short lines""""}",68620
+20211207,200,,survey-text,"{""""learn_free_response"""":""""I looked to see if it was really long or short and I chose those answers""""}",60862
+20211207,200,,survey-multi-choice,"{""""learn_strategy"""":""""I used a simple mental rule to determine if I should respond yes or no to a given line.""""}",13020
+20211207,200,,survey-text,"{""""transfer_free_response"""":""""I compared the lines to each other and then chose""""}",15272
+20211207,200,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",18496
+20211207,201,enter-sub-number,survey-html-form,"{""""response"""":""""201""""}",3018
+20211207,201,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""it's the longest, and most different than the others""""}",36718
+20211207,201,,survey-text,"{""""learn_free_response"""":""""the lines that were super long or super short belonged in the cateory and the average lines did not""""}",37262
+20211207,201,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",28324
+20211207,201,,survey-text,"{""""transfer_free_response"""":""""if there was a line that very long or very short, it was in the categoory compared to the average lines (if it stuck out from the rest)""""}",47660
+20211207,201,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",12088
+20211207,202,enter-sub-number,survey-html-form,"{""""response"""":""""202""""}",3976
+20211207,202,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""It's the longest one, and the category included a lot of very long lines""""}",32243
+20211207,202,,survey-text,"{""""learn_free_response"""":""""I remembered the category had a wide range between line sizes so I would pick the lines that fell more towards the different extremes of short and long""""}",42607
+20211207,202,,survey-multi-choice,"{""""learn_strategy"""":""""I used a simple mental rule to determine if I should respond yes or no to a given line.""""}",15048
+20211207,202,,survey-text,"{""""transfer_free_response"""":""""I compared the three lines to each other and tried to picture the correct catgeory""""}",24284
+20211207,202,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to memorize which kinds of lines were in the category and which types of lines were not in the category.""""}",7465
+20211207,203,enter-sub-number,survey-html-form,"{""""response"""":""""203""""}",3824
+20211207,203,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""decoy"""",""""response"""":""""L is long so it could have been the correct choice, but I don't think it is long enough to fit the category""""}",58151
+20211207,203,,survey-text,"{""""learn_free_response"""":""""I based a lot of it off of the last line I saw, so a lot was relative""""}",38789
+20211207,203,,survey-multi-choice,"{""""learn_strategy"""":""""I used a simple mental rule to determine if I should respond yes or no to a given line.""""}",11472
+20211207,203,,survey-text,"{""""transfer_free_response"""":""""I knew that the category had the shortest and the longest lines, so I tried to determine if a particular line was long enough or short enough to fit the category. If it wasn't, I would choose the next line that stood out""""}",71815
+20211207,203,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",13201
+20211207,204,enter-sub-number,survey-html-form,"{""""response"""":""""204""""}",4280
+20211207,204,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""it is the longest""""}",15582
+20211207,204,,survey-text,"{""""learn_free_response"""":""""I did ok""""}",5732
+20211207,204,,survey-multi-choice,"{""""learn_strategy"""":""""I used a simple mental rule to determine if I should respond yes or no to a given line.""""}",13966
+20211207,204,,survey-text,"{""""transfer_free_response"""":""""It was much harder""""}",19168
+20211207,204,,survey-multi-choice,"{""""transfer_strategy"""":""""I used my intuition/my experience receiving feedback to figure out which line was most likely to be in the category.""""}",8388
+20211207,205,enter-sub-number,survey-html-form,"{""""response"""":""""205""""}",23770
+20211208,206,enter-sub-number,survey-html-form,"{""""response"""":""""206""""}",9517
+20211208,206,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""competitor"""",""""response"""":""""From my perspective, the lines thaat did belonged in the category tended to be either longer or smaller when compared to \""""middle-sized\"""" lines making it easier to discerd and choose as belonging to the category (in this example, line L is visbily longer)""""}",84124
+20211208,206,,survey-text,"{""""learn_free_response"""":""""During the first set of trials, I kind of just estimated and took a guess for each question presented, noting if the lines were of \""""middle-size\"""", they corresponded to not belonging to the category""""}",65517
+20211208,206,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",14800
+20211208,206,,survey-text,"{""""transfer_free_response"""":""""During the second part of the experiment, I used comparison between the lines presented to determine whether or not they belonged in the category. """"}",62439
+20211208,206,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to pick a line that was either very short or very long.""""}",12238
+20211208,207,enter-sub-number,survey-html-form,"{""""response"""":""""207""""}",3214
+20211208,207,attr_eff_example,survey-html-form,"{""""example_attr_eff_choice"""":""""decoy"""",""""response"""":""""it is the shortest""""}",36132
+20211208,207,,survey-text,"{""""learn_free_response"""":""""looked for shorter lines, and also tried to remember what belonged and what didn't""""}",45422
+20211208,207,,survey-multi-choice,"{""""learn_strategy"""":""""I used my intuition/my experience receiving feedback to figure out if the line was likely to be in the category.""""}",12656
+20211208,207,,survey-text,"{""""transfer_free_response"""":""""tried to use prior knowledge and looked for short lines""""}",26314
+20211208,207,,survey-multi-choice,"{""""transfer_strategy"""":""""I tried to memorize which kinds of lines were in the category and which types of lines were not in the category.""""}",12792

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Name=line_cat
+Exec=/bin/bash -c "~/experiments/line_categorization_experiment/run_experiment.sh"
+Icon=utilities-terminal
+Terminal=true
+Type=Application

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[en_US]=gnome-panel-launcher
+Name[en_US]=cat_2_f21.desktop
+Exec=bash /home/experiment/Documents/Experiments/cat_2_f21/cat_2_f21.sh
+Icon=gnome-panel-lasca

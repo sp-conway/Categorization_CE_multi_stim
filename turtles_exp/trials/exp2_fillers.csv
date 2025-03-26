@@ -1,0 +1,17 @@
+trial_type,choice_set,exp_trial_type,abc_correct,angle_a,angle_b,angle_c,radius_a,radius_b,radius_c,category_a,category_b,category_c
+filler_easy,binary,transfer,a,25,17,NA,75,49,NA,in,out1,NA
+filler_easy,binary,transfer,a,25,17,NA,76,102,NA,in,out1,NA
+filler_easy,binary,transfer,a,24,34,NA,75,49,NA,in,out1,NA
+filler_easy,binary,transfer,a,24,35,NA,75,103,NA,in,out1,NA
+filler_easy,binary,transfer,a,25,16,NA,75,49,NA,in,out1,NA
+filler_easy,binary,transfer,a,25,17,NA,75,48,NA,in,out1,NA
+filler_easy,binary,transfer,a,27,17,NA,75,48,NA,in,out1,NA
+filler_easy,binary,transfer,a,25,34,NA,74,103,NA,in,out1,NA
+filler_easy,trinary,transfer,a,25,15,16,74,103,102,in,out1,out2
+filler_easy,trinary,transfer,a,25,16,34,76,101,102,in,out1,out2
+filler_easy,trinary,transfer,a,25,34,32,75,102,103,in,out1,out2
+filler_easy,trinary,transfer,a,27,34,15,76,102,49,in,out1,out2
+filler_easy,trinary,transfer,a,25,17,34,76,49,47,in,out1,out2
+filler_easy,trinary,transfer,a,24,35,34,74,48,48,in,out1,out2
+filler_easy,trinary,transfer,a,25,15,14,73,48,101,in,out1,out2
+filler_easy,trinary,transfer,a,24,16,16,75,103,102,in,out1,out2

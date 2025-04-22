@@ -12,7 +12,7 @@ source(here("line_exp_3","category_params.R"))
 compute_llikr <- function(jnds, m, s, nc, min, max) log(compute_density(jnds, m, s, nc)/dunif(jnds,min, max))
 
 # read in data ================================================================================================
-d <- here("multi_stim/line_exp_3/data/clean/learn_data.csv") %>%
+d <- here("line_exp_3/data/clean/learn_data.csv") %>%
   read_csv() %>%
   mutate(llikr=case_when(
            exp_condition=="left"~compute_llikr(jnds, in_mean_jnds_left, in_sd_jnds, in_left_nc, jnd_min, jnd_max),
@@ -84,11 +84,9 @@ rt_mean_quants <- d %>%
   summarise(m_rt=mean(rt)) %>%
   ungroup()
 rt_mean_quants %>%
-  ggplot(aes(q,m_rt,col=correct))+
+  ggplot(aes(q,m_rt,col=as.factor(correct)))+
   geom_point()+
   geom_line()+
   scale_x_continuous(breaks=seq(0,1,.2))+
   facet_grid(exp_condition~.)+
   ggthemes::theme_few()
-
-glm(d)

@@ -14,11 +14,11 @@ library(glue)
 library(patchwork)
 
 # Source plotting functions
-source("line_exp_2","functions","plotting_functions.R"))
-source("line_exp_2","functions","density_functions_2.R"))
+source(here("line_exp_2","functions","plotting_functions.R"))
+source(here("line_exp_2","functions","density_functions_2.R"))
 
 # read in data
-transfer <- data.table::fread("line_exp_2","data","cleaned","dataset_transfer.csv")) %>%
+transfer <- data.table::fread(here("line_exp_2","data","cleaned","dataset_transfer.csv")) %>%
   as_tibble() %>%
   mutate(across(c(attr_choice,
                   sub_n,

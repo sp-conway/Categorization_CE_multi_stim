@@ -13,22 +13,32 @@ data_dir_cleaned <- here("line_exp_3","data","clean")
 dir_create(data_dir_cleaned)
 
 clean_learn <- function(f){
+  print(f)
   d <- data.table::fread(f) %>%
     as_tibble()
-  if(nrow(d)==0) return(NULL)
+  if(nrow(d)==0 | !any(str_detect("exp_trial_type",colnames(d)))) return(NULL)
   dd <- d %>%
     filter(str_detect(exp_trial_type,"transfer",negate=T) & !is.na(jnds)) %>% # didn't store exp trial type for learning, this just removes transfer trials and instructions/debrief, since only learning had a jnds value
-    select(participant, exp_condition, learn_trials.thisTrialN, dens, jnds, line_len, distribution, 
+    select(participant, computer_number,exp_condition, learn_trials.thisTrialN, dens, jnds, line_len, distribution, 
            learn_trials.key_resp.keys, learn_trials.key_resp.rt,learn_trials.key_resp.corr) %>%
     rename(trial_n=learn_trials.thisTrialN,
            rt=learn_trials.key_resp.rt,
            key_resp=learn_trials.key_resp.keys,
            correct=learn_trials.key_resp.corr) %>%
     mutate(resp=str_replace_all(key_resp,c("^u$"="in","^i$"="out")),
-           trial_n=trial_n+1) %>%
-    relocate(resp,.before=correct) %>%
-    filter(rt>=.1 & rt<=10)
-  return(dd)
+           trial_n=trial_n+1,
+           participant=case_when(
+             participant==61~as.numeric(paste0(as.numeric(participant),as.numeric(computer_number))), # this number used twice
+             T~participant
+           )) %>%
+    relocate(resp,.before=correct) 
+  if(nrow(dd)!=200){
+    return(NULL)
+  }else{
+    dd <- dd %>%
+      filter(rt>=.1 & rt<=10)
+    return(dd)
+  }
 }
 
 check_learn_correct <- function(d){
@@ -50,9 +60,10 @@ learn <- map(data_files_raw, clean_learn) %>%
 check_learn_correct(learn)
 
 clean_transfer <- function(f){
+  print(f)
   d <- data.table::fread(f) %>%
     as_tibble()
-  if(nrow(d)==0) return(NULL)
+  if(nrow(d)==0 | !any(str_detect("exp_trial_type",colnames(d)))) return(NULL)
   dd <- d %>%
     filter(exp_trial_type=="transfer") %>%
     filter(!is.na(transfer_binary_dummy.key_resp_transfer_binary.rt)|
@@ -113,19 +124,28 @@ clean_transfer <- function(f){
     rowwise() %>%
     mutate(stim_min=min(c(stim_1_psy,stim_2_psy,stim_3_psy),na.rm=T),
            stim_max=max(c(stim_1_psy,stim_2_psy,stim_3_psy),na.rm=T),
-           choice=case_when(
-             str_detect(trial_type,"filler")~NA_character_,
-             str_detect(set,"^l-s$") & choice_stim_psy==stim_min ~"s",
-             str_detect(set,"^l-s$") & choice_stim_psy==stim_max ~"l",
-             str_detect(set,"^l-s-ds$") & choice_stim_psy==stim_min ~"ds",
-             str_detect(set,"^l-s-ds$") & choice_stim_psy==stim_max ~"l",
-             str_detect(set,"^l-s-ds$") & choice_stim_psy!=stim_min & choice_stim_psy!=stim_max ~ "s",
-             str_detect(set,"^l-s-dl$") & choice_stim_psy==stim_min ~"s",
-             str_detect(set,"^l-s-dl$") & choice_stim_psy==stim_max ~"dl",
-             str_detect(set,"^l-s-dl$") & choice_stim_psy!=stim_min & choice_stim_psy!=stim_max ~ "l"
-           )) %>%
-    filter(rt>=.1 & rt<=10) 
-  return(dd)
+           choice = case_when(
+             str_detect(trial_type, "filler") ~ NA_character_,
+             set == "l-s" & isTRUE(all.equal(as.numeric(choice_stim_psy), as.numeric(stim_min))) ~ "s",
+             set == "l-s" & isTRUE(all.equal(as.numeric(choice_stim_psy), as.numeric(stim_max))) ~ "l",
+             set == "l-s-ds" & isTRUE(all.equal(as.numeric(choice_stim_psy), as.numeric(stim_min))) ~ "ds",
+             set == "l-s-ds" & isTRUE(all.equal(as.numeric(choice_stim_psy), as.numeric(stim_max))) ~ "l",
+             set == "l-s-ds" & !isTRUE(all.equal(as.numeric(choice_stim_psy), as.numeric(stim_min))) & !isTRUE(all.equal(as.numeric(choice_stim_psy), as.numeric(stim_max))) ~ "s",
+             set == "l-s-dl" & isTRUE(all.equal(as.numeric(choice_stim_psy), as.numeric(stim_min))) ~ "s",
+             set == "l-s-dl" & isTRUE(all.equal(as.numeric(choice_stim_psy), as.numeric(stim_max))) ~ "dl",
+             set == "l-s-dl" & !isTRUE(all.equal(as.numeric(choice_stim_psy), as.numeric(stim_min))) & !isTRUE(all.equal(as.numeric(choice_stim_psy), as.numeric(stim_max))) ~ "l"
+           ),
+           participant=case_when(
+             participant==61~as.numeric(paste0(as.numeric(participant),as.numeric(computer_number))), # this number used twice
+             T~participant
+           ))
+  if(nrow(dd)!=288){
+    return(NULL)
+  }else{
+    dd <- dd %>%
+      filter(rt>=.1 & rt<=10) 
+    return(dd)
+  }
 }
 
 transfer <- map_dfr(data_files_raw, clean_transfer)
@@ -143,3 +163,20 @@ check_transfer(transfer)
 
 write_csv(learn,path(data_dir_cleaned,"learn_data.csv"))
 write_csv(transfer,path(data_dir_cleaned,"transfer_data.csv"))
+
+transfer %>%
+  distinct(participant,exp_condition) %>%
+  group_by(exp_condition) %>%
+  summarise(N=n())
+
+learn %>%
+  group_by(participant) %>%
+  summarise(n=n()) %>%
+  ungroup() %>%
+  arrange(n)
+
+transfer %>%
+  group_by(participant) %>%
+  summarise(n=n()) %>%
+  ungroup() %>%
+  arrange(n)

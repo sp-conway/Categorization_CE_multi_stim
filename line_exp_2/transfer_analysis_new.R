@@ -33,7 +33,7 @@ transfer <- data.table::fread(here("line_exp_2","data","cleaned","dataset_transf
 n_subs <- length(unique(transfer$sub_n))
 
 # Attraction effect trial specs
-attr_eff_specs <- read_csv("line_exp_2","trials","attr_eff_trials_long_1b.csv"))
+attr_eff_specs <- read_csv(here("line_exp_2","trials","attr_eff_trials_long_1b.csv"))
 
 # Function for computing 95% CI
 compute_ci <- function(mean,sd, n_subs,side){
@@ -105,7 +105,7 @@ tridiff1_avg %>%
   facet_wrap(vars(side_correct),labeller = label_both)+
   ggthemes::theme_few()+
   theme(text=element_text(size=10))
-ggsave("line_exp_2","plots","tri_effect_by_sidecorrect_avg.jpg"),
+ggsave(here("line_exp_2","plots","tri_effect_by_sidecorrect_avg.jpg"),
        width=5,height=4)
 
 tri_diff1 %>%
@@ -115,7 +115,7 @@ tri_diff1 %>%
   geom_histogram(fill="lightblue",col="black")+
   facet_grid(side_correct~name)+
   ggthemes::theme_few()
-ggsave("line_exp_2","plots","tri_effect_by_sidecorrect_hist.jpg"),
+ggsave(here("line_exp_2","plots","tri_effect_by_sidecorrect_hist.jpg"),
        width=5,height=4)
 
 tri_diff2 <- attraction %>%
@@ -157,14 +157,14 @@ tri_diff2 %>%
   geom_histogram(fill="lightblue",col="black")+
   facet_wrap(vars(name))+
   ggthemes::theme_few()
-ggsave("line_exp_2","plots","tri_effect_collapsed_hist.jpg"),
+ggsave(here("line_exp_2","plots","tri_effect_collapsed_hist.jpg"),
        width=5,height=4)
 tridiff2_avg %>%
   ggplot(aes(effect,mean))+
   geom_col(position="dodge",fill="lightblue",col="black")+
   geom_errorbar(aes(ymin=cilower,ymax=ciupper),width=.2)+
   ggthemes::theme_few()
-ggsave("line_exp_2","plots","tri_effect_collapsed_avg.jpg"),
+ggsave(here("line_exp_2","plots","tri_effect_collapsed_avg.jpg"),
        width=5,height=4)
 
    
